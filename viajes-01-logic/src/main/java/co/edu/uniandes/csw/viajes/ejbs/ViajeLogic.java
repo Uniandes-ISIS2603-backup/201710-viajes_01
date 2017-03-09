@@ -25,7 +25,7 @@ public class ViajeLogic {
     }
 
     
-    public ViajeEntity createViaje(ViajeEntity entity) throws Exception {
+    public ViajeEntity createViaje(ViajeEntity entity) {
         
         persistence.create(entity);
         return entity;

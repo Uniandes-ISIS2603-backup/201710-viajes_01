@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class ReservaEntity implements Serializable {
@@ -15,6 +16,13 @@ public class ReservaEntity implements Serializable {
 	private Integer pasajeros;
 	private Double precio;
 	private Double comision;
+        
+        @ManyToOne
+        private UsuarioEntity usuario;
+        
+        @ManyToOne
+        private ViajeEntity viaje;
+        
 	
 	public Long getId(){
 		return id;
@@ -47,7 +55,23 @@ public class ReservaEntity implements Serializable {
 	public void setComision(Double comision){
 		this.comision = comision;
 	}
-	
+
+    public UsuarioEntity getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
+    }
+
+    public ViajeEntity getViaje() {
+        return viaje;
+    }
+
+    public void setViaje(ViajeEntity viaje) {
+        this.viaje = viaje;
+    }
+  
 	@Override
     public boolean equals(Object obj) {
         if (this.getId() != null) {

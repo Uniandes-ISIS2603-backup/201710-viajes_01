@@ -29,8 +29,8 @@ public class MultaEntity implements Serializable {
    
    private String descripcion;
    
-   //@OneToOne
-   //private Usuario usuario;
+   @OneToOne
+   private UsuarioEntity usuario;
 
     public Long getId() {
         return id;
@@ -63,6 +63,15 @@ public class MultaEntity implements Serializable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public UsuarioEntity getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
+    }
+    
        
     public boolean equals(Object obj) {
         if (this.getId() != null) {

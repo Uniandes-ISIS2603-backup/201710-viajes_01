@@ -47,11 +47,11 @@ public class ViajeEntity implements Serializable{
     @Temporal(TemporalType.DATE)
     private Date horaLlegada;
     
-    //@ManyToOne
-    //private Vehiculo vehiculo;
+    @ManyToOne
+    private VehiculoEntity vehiculo;
     
-    //@OneToMany(mappedBy ="viaje")
-    //private List<Reserva> pasajeros;
+    @OneToMany(mappedBy ="viaje")
+    private List<ReservaEntity> pasajeros;
     
     
 
@@ -166,6 +166,25 @@ public class ViajeEntity implements Serializable{
     public void setNumPasajeros(int numPasajeros) {
         this.numPasajeros = numPasajeros;
     }
+
+    public VehiculoEntity getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(VehiculoEntity vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
+    public List<ReservaEntity> getPasajeros() {
+        return pasajeros;
+    }
+
+    public void setPasajeros(List<ReservaEntity> pasajeros) {
+        this.pasajeros = pasajeros;
+    }
+    
+  
+    
 public boolean equals(Object obj) {
         if (this.getId() != null) {
             return this.getId().equals(((ViajeEntity) obj).getId());

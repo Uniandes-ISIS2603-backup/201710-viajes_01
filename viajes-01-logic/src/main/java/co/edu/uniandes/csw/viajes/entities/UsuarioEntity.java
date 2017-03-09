@@ -6,10 +6,13 @@
 package co.edu.uniandes.csw.viajes.entities;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -28,6 +31,16 @@ public class UsuarioEntity implements Serializable{
     private String email;
     private int telefono;
     private String licencia;
+    
+    @OneToOne
+    private MultaEntity multa;
+    
+    @OneToMany(mappedBy = "usuario")
+    private List<VehiculoEntity> vehiculos;
+    
+    @OneToMany(mappedBy = "usuario")
+    private List<ReservaEntity> reservas; 
+    
 
     public Long getId() {
         return id;
@@ -76,6 +89,30 @@ public class UsuarioEntity implements Serializable{
     public void setLicencia(String licencia) {
         this.licencia = licencia;
     }
+
+    public MultaEntity getMulta() {
+        return multa;
+    }
+
+    public void setMulta(MultaEntity multa) {
+        this.multa = multa;
+    }
+
+    public List<VehiculoEntity> getVehiculos() {
+        return vehiculos;
+    }
+
+    public void setVehiculos(List<VehiculoEntity> vehiculos) {
+        this.vehiculos = vehiculos;
+    }
+
+    public List<ReservaEntity> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(List<ReservaEntity> reservas) {
+        this.reservas = reservas;
+    }        
     
     @Override
     public int hashCode() {
