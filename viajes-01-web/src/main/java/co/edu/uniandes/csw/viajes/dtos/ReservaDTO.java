@@ -1,16 +1,14 @@
 package co.edu.uniandes.csw.viajes.dtos;
 
-import co.edu.uniandes.csw.Reserva.entities.ReservaEntity;
+import co.edu.uniandes.csw.viajes.entities.ReservaEntity;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 @XmlRootElement
 public class ReservaDTO implements Serializable{
 
-    private Long id;
-	private Integer pasajeros;
-	private Double precio;
-	private Double comision;
+    protected Long id;
+    protected Integer pasajeros;
 
     public ReservaDTO() {}
 
@@ -20,11 +18,9 @@ public class ReservaDTO implements Serializable{
      * @param entity Entidad ReservaEntity desde la cual se va a crear el nuevo objeto.
      */
     public ReservaDTO(ReservaEntity entity){
-	   if (entity!=null){
+	if (entity!=null){
         this.id=entity.getId();
         this.pasajeros=entity.getPasajeros();
-        this.precio=entity.getPrecio();
-        this.comision=entity.getComision();
        }
     }
 
@@ -37,17 +33,15 @@ public class ReservaDTO implements Serializable{
         ReservaEntity entity = new ReservaEntity();
         entity.setId(this.getId());
         entity.setPasajeros(this.getPasajeros());
-        entity.setPrecio(this.getPrecio());
-        entity.setComision(this.getComision());
-		return entity;
-	}
+        return entity;
+    }
 	
 	public Long getId(){
-		return id;
+            return id;
 	}
 	
 	public void setId(Long id){
-		this.id = id;
+            this.id = id;
 	}
 	
 	public Integer getPasajeros(){
@@ -56,21 +50,5 @@ public class ReservaDTO implements Serializable{
 	
 	public void setPasajeros(Integer pasajeros){
 		this.pasajeros = pasajeros;
-	}
-	
-	public Double getPrecio(){
-		return precio;
-	}
-	
-	public void setPrecio(Double precio){
-		this.precio = precio;
-	}
-	
-	public Double getComision(){
-		return comision;
-	}
-	
-	public void setComision(Double comision){
-		this.comision = comision;
 	}
 }

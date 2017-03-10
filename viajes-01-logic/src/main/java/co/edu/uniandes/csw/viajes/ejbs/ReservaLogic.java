@@ -11,7 +11,7 @@ import javax.inject.Inject;
 public class ReservaLogic {
 
     @Inject
-	private ReservaPersistence persistence;
+    private ReservaPersistence persistence;
 
     /**
      * Obtiene la lista de los registros de Reservas.

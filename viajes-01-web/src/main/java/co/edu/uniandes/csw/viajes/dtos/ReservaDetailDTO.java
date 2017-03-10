@@ -1,12 +1,13 @@
 package co.edu.uniandes.csw.viajes.dtos;
 
-import co.edu.uniandes.csw.Reserva.entities.ReservaEntity;
+import co.edu.uniandes.csw.viajes.entities.ReservaEntity;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class ReservaDetailDTO extends ReservaDTO{
 
-
+    private Double precio;
+    private Double comision;
 
     public ReservaDetailDTO(){
         super();
@@ -20,7 +21,7 @@ public class ReservaDetailDTO extends ReservaDTO{
      */
     public ReservaDetailDTO(ReservaEntity entity) {
         super(entity);
-		this.precio=entity.getPrecio();
+        this.precio=entity.getPrecio();
         this.comision=entity.getComision();
     }
 
@@ -35,24 +36,24 @@ public class ReservaDetailDTO extends ReservaDTO{
         ReservaEntity entity = new ReservaEntity();
         entity.setId(this.getId());
         entity.setPasajeros(this.getPasajeros());
-		entity.setPrecio(this.getPrecio());
-		entity.setComision(this.getComision());
-		return entity;
+	entity.setPrecio(this.getPrecio());
+	entity.setComision(this.getComision());
+	return entity;
     }
 	
 	public Double getPrecio(){
-		return precio;
+            return precio;
 	}
 	
 	public void setPrecio(Double precio){
-		this.precio = precio;
+            this.precio = precio;
 	}
 	
 	public Double getComision(){
-		return comision;
+            return comision;
 	}
 	
 	public void setComision(Double comision){
-		this.comision = comision;
+            this.comision = comision;
 	}
 }

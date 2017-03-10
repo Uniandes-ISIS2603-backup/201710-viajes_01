@@ -2,7 +2,7 @@ package co.edu.uniandes.csw.viajes.resources;
 
 import co.edu.uniandes.csw.viajes.dtos.ReservaDTO;
 import co.edu.uniandes.csw.viajes.ejbs.ReservaLogic;
-import co.edu.uniandes.csw.viajes.entities.reservaEntity;
+import co.edu.uniandes.csw.viajes.entities.ReservaEntity;
 import co.edu.uniandes.csw.viajes.exceptions.BusinessLogicException;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,7 +17,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/Reservas")
+@Path("/reservas")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class ReservaResource {
@@ -27,23 +27,23 @@ public class ReservaResource {
     
     @GET
     public List<ReservaDTO> getReservas(){
-        List<reservaEntity> reservaEntities = reservaLogic.getReservas();
+        List<ReservaEntity> reservaEntities = reservaLogic.getReservas();
         return reservaEntities.stream()
-                .map(ReservaDTO::new)
-                .collect(Collectors.toList());
+            .map(ReservaDTO::new)
+            .collect(Collectors.toList());
     }
     
     @POST
     public ReservaDTO createReserva(ReservaDTO ReservaDTO) throws BusinessLogicException{
-        reservaEntity reservaEntity = ReservaDTO.toEntity();
-        reservaEntity createdReserva = reservaLogic.createReserva(reservaEntity);
+        ReservaEntity reservaEntity = ReservaDTO.toEntity();
+        ReservaEntity createdReserva = reservaLogic.createReserva(reservaEntity);
         return new ReservaDTO(createdReserva);
     }
     
     @PUT
     @Path("{id: \\d+}")
-    public ReservaDTO updateReserva(@PathParam("id") Long id, ReservaDTO ReservaDTO){
-        reservaEntity reservaEntity = ReservaDTO.toEntity();
+    public ReservaDTO updateReserva(@PathParam("id") Long id, ReservaDTO ReservaDTO) throws BusinessLogicException{
+        ReservaEntity reservaEntity = ReservaDTO.toEntity();
         reservaEntity.setId(id);
         return new ReservaDTO(reservaLogic.updateReserva(reservaEntity));
     }
