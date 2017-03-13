@@ -10,7 +10,7 @@ import javax.persistence.Query;
 @Stateless
 public class ReservaPersistence{
 
-    @PersistenceContext(unitName="carhopPU")
+    @PersistenceContext(unitName="viajesPU")
     protected EntityManager em;
 
     public ReservaEntity find(Long id) {
