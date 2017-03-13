@@ -17,6 +17,9 @@ private Long id;
 private Double valor;
 private Date fecha;
 private String descripcion;
+private boolean estado;
+private Date fechaPago;
+
 
 public MultaDTO(){
     
@@ -28,6 +31,8 @@ public MultaDTO(MultaEntity entity){
         this.valor = entity.getValor();
         this.fecha = entity.getFecha();
         this.descripcion = entity.getDescripcion();
+        this.estado = entity.getEstado();
+        this.fechaPago = entity.getFechaPago();
     }
     
 }
@@ -38,6 +43,8 @@ public MultaEntity toEntity(){
     entity.setValor(valor);
     entity.setFecha(fecha);
     entity.setDescripcion(descripcion);
+    entity.setEstado(estado);
+    entity.setFechaPago(fechaPago);
     return entity;
 }
 
@@ -57,6 +64,14 @@ public MultaEntity toEntity(){
         this.valor = valor;
     }
 
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
     public String getDescripcion() {
         return descripcion;
     }
@@ -65,6 +80,24 @@ public MultaEntity toEntity(){
         this.descripcion = descripcion;
     }
 
+    public boolean getEstado(){
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
+    public Date getFechaPago() {
+        return fechaPago;
+    }
+
+    public void setFechaPago(Date fechaPago) {
+        this.fechaPago = fechaPago;
+    }
+    
+    
+    
       
     
 }

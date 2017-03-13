@@ -8,6 +8,7 @@
     <class>co.edu.uniandes.csw.viajes.entities.ReservaEntity</class>
     <class>co.edu.uniandes.csw.viajes.entities.UsuarioEntity</class>
     <class>co.edu.uniandes.csw.viajes.entities.ViajeEntity</class>
+    <class>co.edu.uniandes.csw.viajes.entities.CiudadEntity</class>
     <properties>
       <property name="eclipselink.logging.level" value="FINE"/>
       <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>

@@ -29,8 +29,19 @@ public class MultaEntity implements Serializable {
    
    private String descripcion;
    
+   /** Indica si la multa ya ha sido pagada o se encuentra pendiente
+    ** True si esta pago, false de lo contrario
+   */
+   private boolean estado;
+   
+   @Temporal(TemporalType.DATE)
+   private Date fechaPago;
+   
    @OneToOne
    private UsuarioEntity usuario;
+   
+   @OneToOne
+   private ReservaEntity reserva;
 
     public Long getId() {
         return id;
@@ -64,21 +75,44 @@ public class MultaEntity implements Serializable {
         this.descripcion = descripcion;
     }
 
+    public boolean getEstado(){
+        return estado;
+    }
+    
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+    
+    public Date getFechaPago() {
+        return fechaPago;
+    }
+
+    public void setFechaPago(Date fechaPago) {
+        this.fechaPago = fechaPago;
+    }
+
     public UsuarioEntity getUsuario() {
         return usuario;
     }
-
-    public void setUsuario(UsuarioEntity usuario) {
-        this.usuario = usuario;
-    }
-    
-       
-    public boolean equals(Object obj) {
+public boolean equals(Object obj) {
         if (this.getId() != null) {
             return this.getId().equals(((MultaEntity) obj).getId());
         }
         return super.equals(obj);
     }
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
+    }
+
+    public ReservaEntity getReserva() {
+        return reserva;
+    }
+
+    public void setReserva(ReservaEntity reserva) {
+        this.reserva = reserva;
+    }
+       
+    
 
     @Override
     public int hashCode() {
