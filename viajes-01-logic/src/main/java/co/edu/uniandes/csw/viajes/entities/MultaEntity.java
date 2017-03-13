@@ -94,12 +94,7 @@ public class MultaEntity implements Serializable {
     public UsuarioEntity getUsuario() {
         return usuario;
     }
-public boolean equals(Object obj) {
-        if (this.getId() != null) {
-            return this.getId().equals(((MultaEntity) obj).getId());
-        }
-        return super.equals(obj);
-    }
+
     public void setUsuario(UsuarioEntity usuario) {
         this.usuario = usuario;
     }
@@ -113,6 +108,12 @@ public boolean equals(Object obj) {
     }
        
     
+    public boolean equals(Object obj) {
+        if (this.getId() != null) {
+            return this.getId().equals(((MultaEntity) obj).getId());
+        }
+        return super.equals(obj);
+    }
 
     @Override
     public int hashCode() {

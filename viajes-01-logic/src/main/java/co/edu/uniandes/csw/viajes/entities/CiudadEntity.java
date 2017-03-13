@@ -61,5 +61,19 @@ public class CiudadEntity implements Serializable{
         this.viajeVuelta = viajeVuelta;
     }
     
+     public boolean equals(Object obj) {
+        if (this.getId() != null) {
+            return this.getId().equals(((CiudadEntity) obj).getId());
+        }
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        if (this.getId() != null) {
+            return this.getId().hashCode();
+        }
+        return super.hashCode();
+    }
     
 }
