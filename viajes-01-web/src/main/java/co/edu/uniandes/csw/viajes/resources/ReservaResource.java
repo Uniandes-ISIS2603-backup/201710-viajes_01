@@ -23,6 +23,7 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class ReservaResource {
     
+   
     @Inject
     private ReservaLogic reservaLogic;
     
@@ -35,7 +36,7 @@ public class ReservaResource {
     }
     
     @POST
-    public ReservaDTO createReserva(ReservaDetailDTO ReservaDTO) throws BusinessLogicException{
+    public ReservaDTO createReserva(ReservaDTO ReservaDTO) throws BusinessLogicException{
         ReservaEntity reservaEntity = ReservaDTO.toEntity();
         ReservaEntity createdReserva = reservaLogic.createReserva(reservaEntity);
         return new ReservaDTO(createdReserva);
@@ -43,7 +44,7 @@ public class ReservaResource {
     
     @PUT
     @Path("{id: \\d+}")
-    public ReservaDTO updateReserva(@PathParam("id") Long id, ReservaDetailDTO ReservaDTO) throws BusinessLogicException{
+    public ReservaDTO updateReserva(@PathParam("id") Long id, ReservaDTO ReservaDTO) throws BusinessLogicException{
         ReservaEntity reservaEntity = ReservaDTO.toEntity();
         reservaEntity.setId(id);
         return new ReservaDTO(reservaLogic.updateReserva(reservaEntity));
