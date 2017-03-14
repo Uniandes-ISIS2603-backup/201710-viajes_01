@@ -24,10 +24,10 @@ public class CiudadEntity implements Serializable{
     private String nombre;
     
     //@OneToMany(mappedBy ="ciudadOrigen")
-    private List<ViajeEntity> viajeIda;
+    //private List<ViajeEntity> viajeIda;
     
     //@OneToMany(mappedBy ="ciudadDestino")
-    private List<ViajeEntity> viajeVuelta;
+    //private List<ViajeEntity> viajeVuelta;
 
     public Long getId() {
         return id;
@@ -45,6 +45,7 @@ public class CiudadEntity implements Serializable{
         this.nombre = nombre;
     }
 
+    /*
     public List<ViajeEntity> getViajeIda() {
         return viajeIda;
     }
@@ -60,6 +61,7 @@ public class CiudadEntity implements Serializable{
     public void setViajeVuelta(List<ViajeEntity> viajeVuelta) {
         this.viajeVuelta = viajeVuelta;
     }
+*/
     
      public boolean equals(Object obj) {
         if (this.getId() != null) {
