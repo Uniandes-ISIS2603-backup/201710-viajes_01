@@ -26,8 +26,8 @@ public class ViajeEntity implements Serializable{
     
     //@ManyToOne
     private String ciudadOrigen;
-    //@ManyToOne
-    private String  ciudadDestino;
+    @ManyToOne
+    private String ciudadDestino;
     private String direccionRecoger;
     private String direccionDejar;
     
