@@ -28,32 +28,32 @@ public class ReservaResource {
     private ReservaLogic reservaLogic;
     
     @GET
-    public List<ReservaDTO> getReservas(){
+    public List<ReservaDetailDTO> getReservas(){
         List<ReservaEntity> reservaEntities = reservaLogic.getReservas();
         return reservaEntities.stream()
-            .map(ReservaDTO::new)
+            .map(ReservaDetailDTO::new)
             .collect(Collectors.toList());
     }
     
     @POST
-    public ReservaDTO createReserva(ReservaDTO ReservaDTO) throws BusinessLogicException{
+    public ReservaDetailDTO createReserva(ReservaDetailDTO ReservaDTO) throws BusinessLogicException{
         ReservaEntity reservaEntity = ReservaDTO.toEntity();
         ReservaEntity createdReserva = reservaLogic.createReserva(reservaEntity);
-        return new ReservaDTO(createdReserva);
+        return new ReservaDetailDTO(createdReserva);
     }
     
     @PUT
     @Path("{id: \\d+}")
-    public ReservaDTO updateReserva(@PathParam("id") Long id, ReservaDTO ReservaDTO) throws BusinessLogicException{
+    public ReservaDetailDTO updateReserva(@PathParam("id") Long id, ReservaDetailDTO ReservaDTO) throws BusinessLogicException{
         ReservaEntity reservaEntity = ReservaDTO.toEntity();
         reservaEntity.setId(id);
-        return new ReservaDTO(reservaLogic.updateReserva(reservaEntity));
+        return new ReservaDetailDTO(reservaLogic.updateReserva(reservaEntity));
     }
     
     @GET
     @Path("{id: \\d+}")
-    public ReservaDTO getReserva(@PathParam("id") Long id){
-        return new ReservaDTO(reservaLogic.getReserva(id));
+    public ReservaDetailDTO getReserva(@PathParam("id") Long id){
+        return new ReservaDetailDTO(reservaLogic.getReserva(id));
     }
     
     @DELETE
