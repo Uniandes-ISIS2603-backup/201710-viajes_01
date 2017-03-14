@@ -23,10 +23,10 @@ public class CiudadEntity implements Serializable{
     
     private String nombre;
     
-    @OneToMany(mappedBy ="ciudadOrigen")
+    //@OneToMany(mappedBy ="ciudadOrigen")
     private List<ViajeEntity> viajeIda;
     
-    @OneToMany(mappedBy ="ciudadDestino")
+    //@OneToMany(mappedBy ="ciudadDestino")
     private List<ViajeEntity> viajeVuelta;
 
     public Long getId() {
