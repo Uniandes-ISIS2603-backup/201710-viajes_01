@@ -9,6 +9,8 @@ public class ReservaDTO implements Serializable{
 
     protected Long id;
     protected Integer pasajeros;
+    protected Double precio;
+    protected Double comision;
 
     public ReservaDTO() {}
 
@@ -21,6 +23,8 @@ public class ReservaDTO implements Serializable{
 	if (entity!=null){
         this.id=entity.getId();
         this.pasajeros=entity.getPasajeros();
+        this.precio=entity.getPrecio();
+        this.comision=entity.getComision();
        }
     }
 
@@ -33,6 +37,8 @@ public class ReservaDTO implements Serializable{
         ReservaEntity entity = new ReservaEntity();
         entity.setId(this.getId());
         entity.setPasajeros(this.getPasajeros());
+        entity.setPrecio(this.getprecio());
+        entity.setComision(this.getComision());
         return entity;
     }
 	
@@ -50,5 +56,21 @@ public class ReservaDTO implements Serializable{
 	
 	public void setPasajeros(Integer pasajeros){
 		this.pasajeros = pasajeros;
+	}
+        
+        public void setPrecio(Double precio){
+		this.precio = precio;
+	}
+        
+        public void setComision(Double comision){
+		this.comision = comision;
+	}
+        
+        public Double getComision(){
+		return comision;
+	}
+        
+        public Double getprecio(){
+		return precio;
 	}
 }
