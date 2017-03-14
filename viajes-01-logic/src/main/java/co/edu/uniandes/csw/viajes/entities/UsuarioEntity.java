@@ -32,7 +32,7 @@ public class UsuarioEntity implements Serializable{
     private int telefono;
     private String licencia;
     
-    @OneToOne
+    //@OneToOne
     private MultaEntity multa;
     
     @OneToMany(mappedBy = "usuario")

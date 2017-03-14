@@ -1,6 +1,7 @@
 package co.edu.uniandes.csw.viajes.resources;
 
 import co.edu.uniandes.csw.viajes.dtos.ReservaDTO;
+import co.edu.uniandes.csw.viajes.dtos.ReservaDetailDTO;
 import co.edu.uniandes.csw.viajes.ejbs.ReservaLogic;
 import co.edu.uniandes.csw.viajes.entities.ReservaEntity;
 import co.edu.uniandes.csw.viajes.exceptions.BusinessLogicException;
@@ -34,7 +35,7 @@ public class ReservaResource {
     }
     
     @POST
-    public ReservaDTO createReserva(ReservaDTO ReservaDTO) throws BusinessLogicException{
+    public ReservaDTO createReserva(ReservaDetailDTO ReservaDTO) throws BusinessLogicException{
         ReservaEntity reservaEntity = ReservaDTO.toEntity();
         ReservaEntity createdReserva = reservaLogic.createReserva(reservaEntity);
         return new ReservaDTO(createdReserva);
@@ -42,7 +43,7 @@ public class ReservaResource {
     
     @PUT
     @Path("{id: \\d+}")
-    public ReservaDTO updateReserva(@PathParam("id") Long id, ReservaDTO ReservaDTO) throws BusinessLogicException{
+    public ReservaDTO updateReserva(@PathParam("id") Long id, ReservaDetailDTO ReservaDTO) throws BusinessLogicException{
         ReservaEntity reservaEntity = ReservaDTO.toEntity();
         reservaEntity.setId(id);
         return new ReservaDTO(reservaLogic.updateReserva(reservaEntity));

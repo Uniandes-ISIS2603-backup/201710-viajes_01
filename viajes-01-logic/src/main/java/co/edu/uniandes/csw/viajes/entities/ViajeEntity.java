@@ -24,7 +24,9 @@ public class ViajeEntity implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    @ManyToOne
     private String ciudadOrigen;
+    @ManyToOne
     private String  ciudadDestino;
     private String direccionRecoger;
     private String direccionDejar;
