@@ -37,10 +37,10 @@ public class MultaEntity implements Serializable {
    @Temporal(TemporalType.DATE)
    private Date fechaPago;
    
-   //@OneToOne
+   @OneToOne
    private UsuarioEntity usuario;
    
-   //@OneToOne
+   @OneToOne
    private ReservaEntity reserva;
 
     public Long getId() {

@@ -17,10 +17,10 @@ public class ReservaEntity implements Serializable{
 	private Double precio;
 	private Double comision;
         
-        //@ManyToOne
+        @ManyToOne
         private UsuarioEntity usuario;
         
-        //@ManyToOne
+        @ManyToOne
         private ViajeEntity viaje;
         
 	
