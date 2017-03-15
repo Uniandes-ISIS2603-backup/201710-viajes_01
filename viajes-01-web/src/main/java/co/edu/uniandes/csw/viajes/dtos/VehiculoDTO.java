@@ -5,7 +5,6 @@
  */
 package co.edu.uniandes.csw.viajes.dtos;
 
-import co.edu.uniandes.csw.viajes.entities.UsuarioEntity;
 import co.edu.uniandes.csw.viajes.entities.VehiculoEntity;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlRootElement;
