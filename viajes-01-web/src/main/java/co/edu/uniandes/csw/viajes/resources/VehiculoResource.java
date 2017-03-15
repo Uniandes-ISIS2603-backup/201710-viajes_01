@@ -51,11 +51,19 @@ public class VehiculoResource {
         return new VehiculoDTO(vehiculoLogic.getVehiculo(id));
     }
     
+    @POST
+    @Path("usuarios/{id: \\d+}")
+    public VehiculoDTO createVehiculo(@PathParam("id") Long idUsuario, VehiculoDTO dto){
+        return new VehiculoDTO(vehiculoLogic.createVehiculo(idUsuario, dto.toEntity()));
+    }
+    
+    /*
     //TODO revisar excepcion
     @POST
     public VehiculoDTO createVehiculo(VehiculoDTO dto){
         return new VehiculoDTO(vehiculoLogic.createVehiculo(dto.toEntity()));
     }
+    */
     
     @PUT
     @Path("{id: \\d+}")

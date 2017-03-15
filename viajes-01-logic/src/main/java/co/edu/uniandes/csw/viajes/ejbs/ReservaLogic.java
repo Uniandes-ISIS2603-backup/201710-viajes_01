@@ -48,7 +48,7 @@ public class ReservaLogic {
      */
     
     public ReservaEntity createReserva(ReservaEntity entity) throws BusinessLogicException{
-	//validarReserva(entity);
+	validarReserva(entity);
         persistence.create(entity);
         return entity;
     }

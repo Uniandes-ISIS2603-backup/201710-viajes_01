@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.viajes.dtos;
 
+import co.edu.uniandes.csw.viajes.entities.UsuarioEntity;
 import co.edu.uniandes.csw.viajes.entities.VehiculoEntity;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -23,6 +24,7 @@ public class VehiculoDTO implements Serializable{
     private String aseguradora;
     private int capacidad;
     private int numeroSeguro;
+    private UsuarioEntity usuario;
 
     public VehiculoDTO() {
     }
@@ -36,6 +38,7 @@ public class VehiculoDTO implements Serializable{
             this.aseguradora = entity.getAseguradora();
             this.capacidad = entity.getCapacidad();
             this.numeroSeguro = entity.getCapacidad();
+            this.usuario = entity.getUsuario();
         }
     }
 
@@ -95,6 +98,14 @@ public class VehiculoDTO implements Serializable{
         this.numeroSeguro = numeroSeguro;
     }
     
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
+    }
+    
+    public UsuarioEntity getUsuario(){
+        return usuario;
+    }
+    
     public VehiculoEntity toEntity(){
         VehiculoEntity entity = new VehiculoEntity();
         entity.setId(this.getId());
@@ -104,6 +115,7 @@ public class VehiculoDTO implements Serializable{
         entity.setAseguradora(this.getAseguradora());
         entity.setNumeroSeguro(this.getNumeroSeguro());
         entity.setMarca(this.getMarca());
+        entity.setUsuario(this.getUsuario());
         return entity;
     }
     
