@@ -21,10 +21,10 @@ public class ReservaDTO implements Serializable{
      */
     public ReservaDTO(ReservaEntity entity){
 	if (entity!=null){
-        this.id=entity.getId();
-        this.pasajeros=entity.getPasajeros();
-        this.precio=entity.getPrecio();
-        this.comision=entity.getComision();
+        id = entity.getId();
+        pasajeros = entity.getPasajeros();
+        precio = entity.getPrecio();
+        comision = entity.getComision();
        }
     }
 
@@ -35,10 +35,10 @@ public class ReservaDTO implements Serializable{
      */
     public ReservaEntity toEntity(){
         ReservaEntity entity = new ReservaEntity();
-        entity.setId(this.getId());
-        entity.setPasajeros(this.getPasajeros());
-        entity.setPrecio(this.getPrecio());
-        entity.setComision(this.getComision());
+        entity.setId(id);
+        entity.setPasajeros(pasajeros);
+        entity.setPrecio(precio);
+        entity.setComision(comision);
         return entity;
     }
 	
@@ -58,19 +58,19 @@ public class ReservaDTO implements Serializable{
 		this.pasajeros = pasajeros;
 	}
         
-        public void setPrecio(Double precio){
-		this.precio = precio;
+        public Double getPrecio(){
+		return precio;
 	}
         
-        public void setComision(Double comision){
-		this.comision = comision;
+        public void setPrecio(Double precio){
+		this.precio = precio;
 	}
         
         public Double getComision(){
 		return comision;
 	}
         
-        public Double getPrecio(){
-		return precio;
+        public void setComision(Double comision){
+		this.comision = comision;
 	}
 }
