@@ -37,7 +37,7 @@ public class ReservaDTO implements Serializable{
         ReservaEntity entity = new ReservaEntity();
         entity.setId(this.getId());
         entity.setPasajeros(this.getPasajeros());
-        entity.setPrecio(this.getprecio());
+        entity.setPrecio(this.getPrecio());
         entity.setComision(this.getComision());
         return entity;
     }
@@ -70,7 +70,7 @@ public class ReservaDTO implements Serializable{
 		return comision;
 	}
         
-        public Double getprecio(){
+        public Double getPrecio(){
 		return precio;
 	}
 }
