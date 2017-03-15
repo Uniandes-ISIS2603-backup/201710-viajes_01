@@ -5,7 +5,6 @@
  */
 package co.edu.uniandes.csw.viajes.ejbs;
 
-import co.edu.uniandes.csw.viajes.entities.UsuarioEntity;
 import co.edu.uniandes.csw.viajes.entities.VehiculoEntity;
 import co.edu.uniandes.csw.viajes.persistence.VehiculoPersistence;
 import java.util.List;
@@ -18,9 +17,7 @@ import javax.inject.Inject;
  */
 @Stateless
 public class VehiculoLogic {
-    
     @Inject private VehiculoPersistence persistence;
-    @Inject private UsuarioLogic usuarioLogic;
     
     public List<VehiculoEntity> getVehiculos(){
         return persistence.findAll();
@@ -30,9 +27,7 @@ public class VehiculoLogic {
         return persistence.find(id);
     }
     
-    public VehiculoEntity createVehiculo(Long idUsuario, VehiculoEntity entity){
-        UsuarioEntity usuario = usuarioLogic.getUsuario(idUsuario);
-        entity.setUsuario(usuario);
+    public VehiculoEntity createVehiculo(VehiculoEntity entity){
         return persistence.create(entity);
     }
     
