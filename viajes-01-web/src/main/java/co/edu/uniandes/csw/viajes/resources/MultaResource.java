@@ -1,3 +1,4 @@
+// TODO: eliminar mensajes por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -45,6 +46,7 @@ public class MultaResource {
     
     @GET
     @Path("{id: \\d+}")
+    // TODO: retornar una excepción / código 40 si no existe
     public MultaDTO getMulta(@PathParam("id") Long id) {
         return new MultaDTO(multaLogic.getMulta(id));
     }

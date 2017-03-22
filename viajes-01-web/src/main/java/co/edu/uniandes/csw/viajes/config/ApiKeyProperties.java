@@ -30,6 +30,7 @@ import java.util.Properties;
  *
  * @author af.esguerra10
  */
+// TODO: revisar si esta clase es requerida o no 
 public class ApiKeyProperties extends Properties {
     
     private static final String ID_PROP = "apiKey.id";

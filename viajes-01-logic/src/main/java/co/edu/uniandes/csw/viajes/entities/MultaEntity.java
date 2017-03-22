@@ -1,3 +1,4 @@
+// TODO: eliminar mensajes por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -37,6 +38,7 @@ public class MultaEntity implements Serializable {
    @Temporal(TemporalType.DATE)
    private Date fechaPago;
    
+   // TODO: revisar la relación. un usuario solo puede tener una multa (en toda su vida)?
    @OneToOne
    private UsuarioEntity usuario;
    

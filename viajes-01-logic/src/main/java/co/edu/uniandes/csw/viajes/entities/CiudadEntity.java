@@ -1,3 +1,4 @@
+// TODO: eliminar mensajes por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,7 +6,7 @@
  */
 package co.edu.uniandes.csw.viajes.entities;
 
-
+// TODO: eliminar los import que no se usan
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
@@ -17,11 +18,14 @@ import javax.persistence.OneToMany;
 @Entity
 public class CiudadEntity implements Serializable{
     
+    // TODO: extender BaseEntity en lugar de definir id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     private String nombre;
+    
+    // TODO: implementar las relaciones con otras clases
     
     //@OneToMany(mappedBy ="ciudadOrigen")
     //private List<ViajeEntity> viajeIda;

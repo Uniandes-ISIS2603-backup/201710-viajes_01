@@ -1,3 +1,4 @@
+// TODO: eliminar mensajes por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,6 +15,9 @@ import javax.persistence.Query;
 
 @Stateless
 public class CiudadPersistence {
+    
+    // TODO: indentar el código de la clase
+    
      @PersistenceContext(unitName = "viajesPU")  
   protected EntityManager em; 
   

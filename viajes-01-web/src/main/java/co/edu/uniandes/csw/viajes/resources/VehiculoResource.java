@@ -1,3 +1,4 @@
+// TODO: eliminar mensajes por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -47,6 +48,7 @@ public class VehiculoResource {
     
     @GET
     @Path("{id: \\d+}")
+    // TODO: retornar una excepción / código 404 si no existe
     public VehiculoDTO getVehiculo(@PathParam("id") Long id){
         return new VehiculoDTO(vehiculoLogic.getVehiculo(id));
     }

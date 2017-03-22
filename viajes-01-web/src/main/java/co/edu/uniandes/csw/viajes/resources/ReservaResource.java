@@ -1,6 +1,7 @@
 package co.edu.uniandes.csw.viajes.resources;
 
 import co.edu.uniandes.csw.viajes.dtos.ReservaDTO;
+// TODO: eliminar los import que no se usan
 import co.edu.uniandes.csw.viajes.dtos.ReservaDetailDTO;
 import co.edu.uniandes.csw.viajes.ejbs.ReservaLogic;
 import co.edu.uniandes.csw.viajes.entities.ReservaEntity;
@@ -52,6 +53,7 @@ public class ReservaResource {
     
     @GET
     @Path("{id: \\d+}")
+    // TODO. retornar una excepción / código 404 si no existe
     public ReservaDTO getReserva(@PathParam("id") Long id){
         return new ReservaDTO(reservaLogic.getReserva(id));
     }
