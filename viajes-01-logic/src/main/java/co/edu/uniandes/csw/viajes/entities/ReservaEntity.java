@@ -8,11 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class ReservaEntity implements Serializable{
+public class ReservaEntity extends BaseEntity{
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
 	private Integer pasajeros;
 	private Double precio;
 	private Double comision;
@@ -23,14 +20,6 @@ public class ReservaEntity implements Serializable{
         @ManyToOne
         private ViajeEntity viaje;
         
-	
-	public Long getId(){
-		return id;
-	}
-	
-	public void setId(Long id){
-		this.id = id;
-	}
 	
 	public Integer getPasajeros(){
 		return pasajeros;
@@ -76,7 +65,7 @@ public class ReservaEntity implements Serializable{
     public boolean equals(Object obj) {
         if (this.getId() != null) {
             return this.getId().equals(((ReservaEntity) obj).getId());
-        }
+}
         return super.equals(obj);
     }
 

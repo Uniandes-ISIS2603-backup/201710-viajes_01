@@ -1,29 +1,16 @@
-// TODO: eliminar mensajes por defecto
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package co.edu.uniandes.csw.viajes.entities;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-public class ViajeEntity implements Serializable{
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class ViajeEntity extends BaseEntity{
     
     //@ManyToOne
     private String ciudadOrigen;
@@ -56,15 +43,6 @@ public class ViajeEntity implements Serializable{
     @OneToMany(mappedBy ="viaje")
     private List<ReservaEntity> pasajeros;
     
-    
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getCiudadOrigen() {
         return ciudadOrigen;
@@ -188,7 +166,7 @@ public class ViajeEntity implements Serializable{
     
   
     
-public boolean equals(Object obj) {
+    public boolean equals(Object obj) {
         if (this.getId() != null) {
             return this.getId().equals(((ViajeEntity) obj).getId());
         }

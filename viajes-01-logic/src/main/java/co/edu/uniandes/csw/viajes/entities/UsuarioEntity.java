@@ -1,17 +1,8 @@
-// TODO: eliminar mensajes por defecto
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package co.edu.uniandes.csw.viajes.entities;
 
-import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -21,12 +12,9 @@ import javax.persistence.OneToOne;
  */
 
 @Entity
-public class UsuarioEntity implements Serializable{
+public class UsuarioEntity extends BaseEntity{
     
     private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;  
     private String numero;
     private String nombre;
     private String email;
@@ -42,14 +30,6 @@ public class UsuarioEntity implements Serializable{
     @OneToMany(mappedBy = "usuario")
     private List<ReservaEntity> reservas; 
     
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNumero() {
         return numero;
@@ -118,7 +98,7 @@ public class UsuarioEntity implements Serializable{
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (getId() != null ? getId().hashCode() : 0);
         return hash;
     }
 
@@ -128,7 +108,7 @@ public class UsuarioEntity implements Serializable{
             return false;
         }
         UsuarioEntity other = (UsuarioEntity) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.getId() == null && other.getId() != null) || (this.getId() != null && !this.getId().equals(other.getId()))) {
             return false;
         }
         return true;
@@ -136,7 +116,7 @@ public class UsuarioEntity implements Serializable{
 
     @Override
     public String toString() {
-        return "co.edu.uniandes.csw.viajes.entities.UsuarioEntity[ id=" + id + " ]";
+        return "co.edu.uniandes.csw.viajes.entities.UsuarioEntity[ id=" + getId() + " ]";
     }
     
     

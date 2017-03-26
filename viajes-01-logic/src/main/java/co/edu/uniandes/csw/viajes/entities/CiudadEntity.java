@@ -1,27 +1,14 @@
-// TODO: eliminar mensajes por defecto
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package co.edu.uniandes.csw.viajes.entities;
 
 // TODO: eliminar los import que no se usan
-import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class CiudadEntity implements Serializable{
+public class CiudadEntity extends BaseEntity{
     
-    // TODO: extender BaseEntity en lugar de definir id
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
     
     private String nombre;
     
@@ -33,13 +20,6 @@ public class CiudadEntity implements Serializable{
     //@OneToMany(mappedBy ="ciudadDestino")
     //private List<ViajeEntity> viajeVuelta;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNombre() {
         return nombre;
@@ -70,7 +50,7 @@ public class CiudadEntity implements Serializable{
      public boolean equals(Object obj) {
         if (this.getId() != null) {
             return this.getId().equals(((CiudadEntity) obj).getId());
-        }
+}
         return super.equals(obj);
     }
 
