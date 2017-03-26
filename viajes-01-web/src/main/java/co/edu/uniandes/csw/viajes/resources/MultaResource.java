@@ -1,9 +1,4 @@
-// TODO: eliminar mensajes por defecto
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package co.edu.uniandes.csw.viajes.resources;
 
 import co.edu.uniandes.csw.viajes.dtos.MultaDTO;
@@ -21,6 +16,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.xml.ws.http.HTTPException;
 
 @Path("/multas")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -46,9 +42,10 @@ public class MultaResource {
     
     @GET
     @Path("{id: \\d+}")
-    // TODO: retornar una excepción / código 40 si no existe
-    public MultaDTO getMulta(@PathParam("id") Long id) {
-        return new MultaDTO(multaLogic.getMulta(id));
+    public MultaDTO getMulta(@PathParam("id") Long id) throws HTTPException{
+        MultaEntity toGet = multaLogic.getMulta(id);
+        if(toGet==null) throw new HTTPException(404);
+        return new MultaDTO(toGet);
     }
     
     @POST

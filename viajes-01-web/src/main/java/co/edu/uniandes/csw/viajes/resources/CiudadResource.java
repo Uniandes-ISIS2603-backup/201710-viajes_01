@@ -1,9 +1,4 @@
-// TODO: eliminar mensajes por defecto
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package co.edu.uniandes.csw.viajes.resources;
 
 import co.edu.uniandes.csw.viajes.dtos.CiudadDTO;
@@ -21,6 +16,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.Path;
+import javax.xml.ws.http.HTTPException;
 
 /**
  *
@@ -50,13 +46,14 @@ public class CiudadResource {
     
     @GET
     @Path("{id: \\d+}")
-    // TODO: retornar una excpeción / código 404 si no existe
-    public CiudadDTO getMulta(@PathParam("id") Long id) {
-        return new CiudadDTO(ciudadLogic.getCiudad(id));
+    public CiudadDTO getCiudad(@PathParam("id") Long id) throws HTTPException {
+        CiudadEntity toGet = ciudadLogic.getCiudad(id);
+        if(toGet==null) throw new HTTPException(404);
+        return new CiudadDTO(toGet);
     }
     
     @POST
-    public CiudadDTO createMulta(CiudadDTO ciudadDTO){
+    public CiudadDTO createCiudad(CiudadDTO ciudadDTO){
         
        
         CiudadEntity ciudad = ciudadDTO.toEntity();
@@ -67,7 +64,7 @@ public class CiudadResource {
     
     @PUT
     @Path("{id: \\d+}")
-    public CiudadDTO updateMulta(@PathParam("id") Long id, CiudadDTO dto) {
+    public CiudadDTO updateCiudad(@PathParam("id") Long id, CiudadDTO dto) {
         CiudadEntity entity = dto.toEntity();
         entity.setId(id);
         return new CiudadDTO(ciudadLogic.updateCiudad(entity));

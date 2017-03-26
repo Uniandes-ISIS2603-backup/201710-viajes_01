@@ -1,8 +1,6 @@
 package co.edu.uniandes.csw.viajes.resources;
 
 import co.edu.uniandes.csw.viajes.dtos.ReservaDTO;
-// TODO: eliminar los import que no se usan
-import co.edu.uniandes.csw.viajes.dtos.ReservaDetailDTO;
 import co.edu.uniandes.csw.viajes.ejbs.ReservaLogic;
 import co.edu.uniandes.csw.viajes.entities.ReservaEntity;
 import co.edu.uniandes.csw.viajes.exceptions.BusinessLogicException;
@@ -18,6 +16,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.xml.ws.http.HTTPException;
 
 @Path("/reservas")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -53,9 +52,10 @@ public class ReservaResource {
     
     @GET
     @Path("{id: \\d+}")
-    // TODO. retornar una excepción / código 404 si no existe
-    public ReservaDTO getReserva(@PathParam("id") Long id){
-        return new ReservaDTO(reservaLogic.getReserva(id));
+    public ReservaDTO getReserva(@PathParam("id") Long id) throws HTTPException{
+        ReservaEntity toGet = reservaLogic.getReserva(id);
+        if(toGet == null) throw new HTTPException(404);
+        return new ReservaDTO(toGet);
     }
     
     @DELETE

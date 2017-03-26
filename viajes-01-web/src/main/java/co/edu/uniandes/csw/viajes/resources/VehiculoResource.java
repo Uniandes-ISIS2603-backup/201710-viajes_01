@@ -1,9 +1,4 @@
-// TODO: eliminar mensajes por defecto
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package co.edu.uniandes.csw.viajes.resources;
 
 import co.edu.uniandes.csw.viajes.ejbs.VehiculoLogic;
@@ -23,6 +18,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.xml.ws.http.HTTPException;
 
 /**
  *
@@ -48,14 +44,15 @@ public class VehiculoResource {
     
     @GET
     @Path("{id: \\d+}")
-    // TODO: retornar una excepción / código 404 si no existe
-    public VehiculoDTO getVehiculo(@PathParam("id") Long id){
-        return new VehiculoDTO(vehiculoLogic.getVehiculo(id));
+    public VehiculoDTO getVehiculo(@PathParam("id") Long id) throws HTTPException{
+        VehiculoEntity toGet = vehiculoLogic.getVehiculo(id);
+        if(toGet==null) throw new HTTPException(404);
+        return new VehiculoDTO(toGet);
     }
     
-    //TODO revisar excepcion
     @POST
-    public VehiculoDTO createVehiculo(VehiculoDTO dto){
+    public VehiculoDTO createVehiculo(VehiculoDTO dto) throws HTTPException{
+        if(dto==null) throw new HTTPException(404);
         return new VehiculoDTO(vehiculoLogic.createVehiculo(dto.toEntity()));
     }
     
