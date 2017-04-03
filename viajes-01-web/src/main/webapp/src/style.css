@@ -14,3 +14,9 @@ and open the template in the editor.
 .circle{
     border-radius:50%;
 }
+.central
+{
+	padding-top: 150px;
+	padding-left: 400px;
+	padding-right: 400px;
+}
