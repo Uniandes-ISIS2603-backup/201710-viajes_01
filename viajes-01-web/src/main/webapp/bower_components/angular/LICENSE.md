@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<!--
 The MIT License (MIT)
 
-Copyright (c) 2015 Los Andes University
+Copyright (c) 2016 Angular
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -21,29 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
--->
-<!DOCTYPE html>
-<html ng-app="mainApp">
-    <head>
-        <title>Viajes | CarHop</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- BOOTSTRAP -->
-        
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-        
-        <!-- ANGULAR JS -->
-        
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <script type="text/javascript" src="src/app.js"></script>
-        
-    </head>
-    <body style="padding-top: 60px;">
-       
-        {{"Probando "+"Prueba"}}
-        
-        
-    </body>
-</html>
