@@ -1,4 +1,4 @@
-#CarHop: Viajes compartidos entre ciudades
+# CarHop: Viajes compartidos entre ciudades
 
 Aplicaciones de "Carpooling" como BlaBlaCar y Ridefinder permite conectar a las personas que desean viajar de una ciudad a otra de forma que usen un mismo vehículo y compartan los costos del viaje. La aplicación toma la información del viaje y calcula el costo que deben pagar los pasajeros. El modelo de negocio consiste en cobrar una comisión. En la actualidad, estas empresas han ganado una gran popularidad en Europa. Un grupo de inversionistas está interesado en construir un servicio similar en el país.
 En la aplicación, cada uno de los usuarios debe identificarse plenamente. Cada usuario tiene un nombre, un correo electrónico, un número de identificación (ej. número de cédula), una dirección y un teléfono. Adicionalmente, si el usuario tiene uno o más vehículos, debe registrar cuáles que piensa usar en sus viajes. Por cada vehículo debe registrar su placa, su marca, color, capacidad (número de puestos), la compañía y el número de su seguro obligatorio. Notése que un usuario puede no tener vehículos, si desea usar el servicio para viajar en los carros de alguien más.
