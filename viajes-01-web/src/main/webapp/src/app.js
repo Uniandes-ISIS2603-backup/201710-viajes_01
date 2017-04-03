@@ -3,11 +3,11 @@
         // External dependencies
         'ui.router'
         // Internal modules dependencies       
-        /*,'bookModule',
-        'authorModule',
-        'editorialModule',
-        'reviewModule',
-        'awardModule'*/
+        /*,'usuarioModule',
+        'vehiculoModule',
+        'viajeModule',
+        'reservaModule',
+        'multaModule'*/
 
     ]);
     // Resuelve problemas de las promesas
