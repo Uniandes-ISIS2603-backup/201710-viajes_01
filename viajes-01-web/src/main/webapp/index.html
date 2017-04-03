@@ -1,28 +1,4 @@
 <!DOCTYPE html>
-<!--
-The MIT License (MIT)
-
-Copyright (c) 2015 Los Andes University
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
--->
-<!DOCTYPE html>
 <html ng-app="mainApp">
     <head>
         <title>Viajes | CarHop</title>
@@ -31,6 +7,7 @@ SOFTWARE.
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- BOOTSTRAP -->
         
+	<link rel="stylesheet" type="text/css" href="src/style.css">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         
         <!-- ANGULAR JS -->
@@ -41,8 +18,27 @@ SOFTWARE.
         
     </head>
     <body style="padding-top: 60px;">
+        
+        
        
-        {{"Probando "+"Prueba"}}
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<img class="circle" src="src/imgs/carhoplogo.png">
+			</div>
+		</nav>
+
+		<div class="container" id="header">
+                    <p>This is the container.</p>
+                        
+                    <p> {{"Probando "+"Prueba"}}</p>
+		</div>
+
+		<div class="navbar navbar-fixed-bottom" align="center">
+			<hr><br>
+				Copyright &copy 2017 by <a href="https://github.com/Uniandes-isis2603/viajes_01">CarHop</a>. All rights reserved. <br>
+				<em>Enjoy the journey.</em>
+			<br><br>
+		</div>
         
         
     </body>
