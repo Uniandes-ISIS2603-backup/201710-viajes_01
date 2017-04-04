@@ -17,13 +17,13 @@
         <script type="text/javascript" src="src/app.js"></script>
         
         
-        <script src="src/modules/books/multas.mod.js" type="text/javascript"></script>
+        <script src="src/modules/multas/multas.mod.js" type="text/javascript"></script>
+        <script src="src/modules/ciudades/ciudades.mod.js" type="text/javascript"></script>
+        <script src="src/modules/viajes/viajes.mod.js" type="text/javascript"></script>
         <!-- 
-        <script src="src/modules/authors/ciudades.mod.js" type="text/javascript"></script>
         <script src="src/modules/editorials/reservas.mod.js" type="text/javascript"></script>
         <script src="src/modules/reviews/usuarios.mod.js" type="text/javascript"></script>
         <script src="src/modules/awards/vehiculos.mod.js" type="text/javascript"></script>
-        <script src="src/modules/awards/viajes.mod.js" type="text/javascript"></script>
         -->
         
     </head>
@@ -55,14 +55,17 @@
 		</div>
         
         <!--Para efectos de prueba ambos ng-show estan en true sin embargo la idea es mostrar
-        esta parte cuando el usuario inicie sesión-->s
+        esta parte cuando el usuario inicie sesión-->
         
                 <div class="row" ng-show="true">
                         <div class="col-sm-12">
                             <ul class="nav nav-tabs">
                                 <li role="navigation"><a ui-sref="multasList">Multas</a></li>
-                               <!--
                                 <li role="presentation"><a ui-sref="ciudadesList">Ciudades</a></li>
+                                <li role="presentation"><a ui-sref=viajesList">Viajes</a></li>
+                                
+                                
+                                 <!--
                                 <li role="presentation"><a ui-sref="reservasList">Reservas</a></li>
                                 <li role="presentation"><a ui-sref="usuariosList">Usuarios</a></li>
                                 <li role="presentation"><a ui-sref="vehiculosList">Vehiculos</a></li>
@@ -76,6 +79,8 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="span4" ui-view="mainView"></div>
+                    <div class="span4">Probando</div>
 
 		<div class="navbar navbar-fixed-bottom" align="center">
 			<hr><br>

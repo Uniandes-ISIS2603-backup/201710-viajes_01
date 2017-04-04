@@ -1,13 +1,10 @@
 (function (ng) {
     var app = angular.module('mainApp', [
         // External dependencies
-        'ui.router'
-        // Internal modules dependencies       
-        /*,'usuarioModule',
+        'ui.router','multaModule','ciudadModule', 'viajeModule'
+        /*,
         'vehiculoModule',
-        'viajeModule',
-        'reservaModule',
-        'multaModule'*/
+        'reservaModule'*/
 
     ]);
     // Resuelve problemas de las promesas

@@ -1,0 +1,91 @@
+<div class="panel panel-default"> 
+    <div class="panel-body">
+    <div class="row">
+        <div class="col-md-1">
+            <div class="thumb">
+                <!--<img class="img-responsive" ng-src="{{currentViaje.image}}"/>-->
+                
+               <h1>ID del Viaje: {{currentViaje.id}}</h1>
+            </div>
+
+        </div>
+        <div class="col-md-1">
+            <dl>     
+                
+                <hr>
+                <dt>ID del Viaje</dt>
+                <dd>{{currentViaje.id}}</dd>
+                
+                <hr>
+                <dt>Ciudad Origen</dt>
+                <dd>{{currentViaje.ciudadOrigen}}</dd>
+                
+                <hr>
+                <dt>Ciudad Destino</dt>
+                <dd>{{currentViaje.ciudadDestino}}</dd>
+          
+                <hr>
+                <dt>Direccion Recoger</dt>
+                <dd>{{currentViaje.direccionRecoger}}</dd>
+          
+                <hr>
+                <dt>Direccion Dejar</dt>
+                <dd>{{currentViaje.direccionDejar}}</dd>
+          
+                <hr>
+                <dt>Fecha Partida</dt>
+                <dd>{{currentViaje.fechaPartida}}</dd>
+          
+                <hr>
+                <dt>Fecha Llegada</dt>
+                <dd>{{currentViaje.fechaLlegada}}</dd>
+          
+                <hr>
+                <dt>Kilometros</dt>
+                <dd>{{currentViaje.kilometros}}</dd>
+          
+                <hr>
+                <dt>Gasto Gasolina</dt>
+                <dd>{{currentViaje.gastoGasolina}}</dd>
+                
+          
+                <hr>
+                <dt>Gasto Peaje</dt>
+                <dd>{{currentViaje.gastoPeaje}}</dd>
+          
+                <hr>
+                <dt>Gasto Otros</dt>
+                <dd>{{currentViaje.gastoOtros}}</dd>
+                
+                <hr>
+                <dt>Número de Pasajeros</dt>
+                <dd>{{currentViaje.numPasajeros}}</dd>
+                
+                
+                <hr>
+                <dt>Hora Salida</dt>
+                <dd>{{currentViaje.horaSalida}}</dd>
+                
+                
+                <hr>
+                <dt>Hora Llegada</dt>
+                <dd>{{currentViaje.horaLlegada}}</dd>
+                
+                <hr>
+                <dt>Tipo Vehiculo</dt>
+                <dd>{{currentViaje.vehiculo.name}}</dd>
+                
+                <hr>
+                <dt>Pasajeros</dt>
+                <dd ng-repeat="pasajero in currentViaje.pasajeros">
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                    <h3>Id de pasajero: {{pasajero.id}}</h3>
+                    <h4>{{pasajero.name}}</h4>
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+        </div>
+</div>
+

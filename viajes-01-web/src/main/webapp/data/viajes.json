@@ -1,0 +1,99 @@
+[   
+    {
+        "id":1,
+        "ciudadOrigen": "Bogota",
+        "ciudadDestino": "Cali",
+        "direccionRecoger": "cra 3 no. 8",
+        "direccionDejar": "call 3 no. 2",
+        "fechaPartida": "12/02/2017",
+        "fechaLlegada": "03/04/2017",
+        "kilometros": 325.0,
+        "gastoGasolina": 20.5,
+        "gastoPeaje": 30.5,
+        "gastoOtros": 20.0,
+        "numPasajeros": 3,
+        "horaSalida": "14:54",
+        "horaLlegada": "17:30",
+        "vehiculo":{"id": 1,
+                  "name": "BMW"},
+        "pasajeros":[ {"id": 1,
+                  "name": "La yeny"}
+                 ,{"id": 2,
+                   "name": "Potro Calmancio"}
+                 ,{"id": 3,
+                   "name": "Arrrrberto"}]
+    },
+    {
+        "id":2,
+        "ciudadOrigen": "Cartagena",
+        "ciudadDestino": "Bogota",
+        "direccionRecoger": "cra 5 no. 8",
+        "direccionDejar": "call 6 no. 2",
+        "fechaPartida": "01/04/2017",
+        "fechaLlegada": "03/04/2017",
+        "kilometros": 1005.0,
+        "gastoGasolina": 80.5,
+        "gastoPeaje": 50.5,
+        "gastoOtros": 40.0,
+        "numPasajeros": 4,
+        "horaSalida": "14:54",
+        "horaLlegada": "17:30",
+        "vehiculo":{"id": 1,
+                  "name": "Chevrolet"},
+        "pasajeros":[ {"id": 1,
+                  "name": "Claudia"}
+                 ,{"id": 2,
+                   "name": "Marilyn Monroe"}
+                 ,{"id": 3,
+                   "name": "Don Cangrejo"}
+                 ,{"id": 4,
+                   "name": "Gerardo"}]
+            
+    },
+    {
+        "id":3,
+        "ciudadOrigen": "Medellin",
+        "ciudadDestino": "Cartagena",
+        "direccionRecoger": "cra 4 no. 8",
+        "direccionDejar": "call 3 no. 2",
+        "fechaPartida": "03/04/2017",
+        "fechaLlegada": "03/04/2017",
+        "kilometros": 525.0,
+        "gastoGasolina": 30.5,
+        "gastoPeaje": 40.5,
+        "gastoOtros": 25.0,
+        "numPasajeros": 3,
+        "horaSalida": "14:54",
+        "horaLlegada": "17:30",
+        "vehiculo":{"id": 1,
+                  "name": "BMW"},
+        "pasajeros":[ {"id": 1,
+                  "name": "Maroon 5"}
+                 ,{"id": 2,
+                   "name": "Elba Arquito"}
+                 ,{"id": 3,
+                   "name": "Camila"}]
+    },
+    {
+        "id":4,
+        "ciudadOrigen": "Cali",
+        "ciudadDestino": "Bogota",
+        "direccionRecoger": "cra 6 no. 8",
+        "direccionDejar": "call 8 no. 2",
+        "fechaPartida": "03/04/2017",
+        "fechaLlegada": "03/04/2017",
+        "kilometros": 200.0,
+        "gastoGasolina": 30.5,
+        "gastoPeaje": 30.5,
+        "gastoOtros": 30.0,
+        "numPasajeros": 2,
+        "horaSalida": "14:54",
+        "horaLlegada": "17:30",
+        "vehiculo":{"id": 3,
+                   "name": "Mazda"},
+        "pasajeros":[ {"id": 1,
+                  "name": "Ese mismo"}
+                 ,{"id": 2,
+                   "name": "Otro"}]
+    }
+]

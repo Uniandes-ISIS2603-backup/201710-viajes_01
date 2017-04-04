@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="col-sm-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Ciudad Origen</th>    
+                    <th>Ciudad Destino</th>  
+                    <th>Direccion Recoger</th>  
+                    <th>Direccion Dejar</th>  
+                    <th>Fecha Partida</th>  
+                    <th>Fecha Llegada</th>  
+                    <th>Kilometros</th>  
+                    <th>Gasto Gasolina</th>  
+                    <th>Gasto Peaje</th>  
+                    <th>Gasto Otros</th>  
+                    <th>Numero Pasajeros</th> 
+                    <th>Hora Salida</th>  
+                    <th>Hora Llegada</th>  
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="viaje in viajesRecords">
+                    <td id="{{$index}}-id">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.ciudadOrigen}}</a></td>
+                    <td id="{{$index}}-ciudadDestino">{{viaje.ciudadDestino}}</td>       
+                    <td id="{{$index}}-direccionRecoger">{{viaje.direccionRecoger}}</td>       
+                    <td id="{{$index}}-direccionDejar">{{viaje.direccionDejar}}</td>       
+                    <td id="{{$index}}-fechaPartida">{{viaje.fechaPartida}}</td>       
+                    <td id="{{$index}}-fechaLlegada">{{viaje.fechaLlegada}}</td>    
+                    <td id="{{$index}}-kilometros">{{viaje.kilometros}}</td>       
+                    <td id="{{$index}}-gastoGasolina">{{viaje.gastoGasolina}}</td>       
+                    <td id="{{$index}}-gastoPeaje">{{viaje.gastoPeaje}}</td>       
+                    <td id="{{$index}}-gastoOtros">{{viaje.gastoOtros}}</td>       
+                    <td id="{{$index}}-numPasajeros">{{viaje.numPasajeros}}</td>       
+                    <td id="{{$index}}-horaSalida">{{viaje.horaSalida}}</td>       
+                    <td id="{{$index}}-horaLlegada">{{viaje.horaLlegada}}</td>  
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

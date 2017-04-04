@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="col-sm-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nombre</th>    
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ciudad in ciudadesRecords">
+                    <td id="{{$index}}-nombre">   <a ui-sref="ciudadDetail({ciudadId: ciudad.id})">{{ciudad.nombre}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

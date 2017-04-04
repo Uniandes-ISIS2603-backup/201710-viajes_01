@@ -32,7 +32,7 @@ public class CiudadResource {
     
     
     @GET
-    public List<CiudadDTO> getMultas(){   
+    public List<CiudadDTO> getCiudad(){   
     
         List<CiudadDTO> ciudadDTOs = new ArrayList<>();
 
