@@ -1,22 +1,17 @@
-
 <div class="container-fluid">
+    <div class="col-sm-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Multa</th>    
 
-            
-         
-         
-             <!--> <div class="col-md-2" ng-repeat="multa en multas | filter:currentUsuario.id"><-->
-
-                <a ui-sref="multaDetail({multaId: multa.id})" class="thumb">
-                    <div class="caption">
-                        <p>{{multa.id}}</p>
-                        <!--><ul ng-repeat="usuario en multa.usuario">
-                            <li>{{usuario.nombre}}</li>
-                        </ul></-->
-                    </div>
-                </a>
-
-            </div>
-         
-           
-</div> 
-
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="multa in multasRecords">
+                    <td id="{{$index}}-nombre">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.nombre}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

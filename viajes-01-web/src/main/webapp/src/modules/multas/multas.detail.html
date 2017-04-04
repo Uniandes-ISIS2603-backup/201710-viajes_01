@@ -3,28 +3,24 @@
         <div class="row">          
             <div class="col-md-3">
                 <dl>     
-                   <dt>Usuario</dt>
-                   <!--> <dd>{{currentMulta.usuario}}</dd>
-                    <ul ng-repeat="usuario in currentMulta.usuario.nombre">
-                        <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.name}}</a>
-                    </ul>
-                    <dt class="bold">Reserva</dt>
+                   
+                    <dt>Usuario</dt>
+                    <dd> {{currentMulta.usuario.nombre}}</dd>
+                    <dt>Reserva</dt>
                     <dd>{{currentMulta.reserva.id}}</dd>
-                    <hr></-->
+                    <hr>
                     <dt> ID</dt>
                     <dd>{{currentMulta.id}}</dd>
                     <hr>
                     <dt>Valor</dt>
                     <dd>{{currentMulta.valor}}</dd>
                     <hr>                    
-                    <dt class="bold">Fecha</dt>
-                    <dd>{{currenMulta.fecha|date:'dd/MM/yyyy'}}</dd>
-                    
-                    <dt class="bold">Descripción</dt>
+                    <dt>Fecha</dt>
+                    <dd>{{currenMulta.fecha|date:'dd/MM/yyyy'}}</dd>                  
+                    <dt>Descripción</dt>
                     <dd>{{currentMulta.descripcion}}</dd>
                 </dl>       
             </div>
         </div>
     </div>
 </div>
-<div ui-view="childrenView"></div>

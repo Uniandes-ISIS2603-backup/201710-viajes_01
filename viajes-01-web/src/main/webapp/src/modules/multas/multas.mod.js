@@ -9,7 +9,7 @@
                 url: '/multas',
                 abstract: true,
                 resolve: {
-                    multas: ['$http', 'multasContext', function ($http, multasContext) {
+                    multas: ['$http', 'multasContext', function ($http) {
                            return $http.get('data/multas.json');
                              //return $http.get(multasContext);
                         }]
