@@ -34,11 +34,11 @@
           
                 <hr>
                 <dt>Fecha Partida</dt>
-                <dd>{{currentViaje.fechaPartida}}</dd>
+                <dd>{{currentViaje.fechaPartida|date:'dd/MM/yyyy'}}</dd>
           
                 <hr>
                 <dt>Fecha Llegada</dt>
-                <dd>{{currentViaje.fechaLlegada}}</dd>
+                <dd>{{currentViaje.fechaLlegada|date:'dd/MM/yyyy'}}</dd>
           
                 <hr>
                 <dt>Kilometros</dt>
@@ -77,10 +77,15 @@
                 
                 <hr>
                 <dt>Pasajeros</dt>
+               <!--> <dd ng-repeat="pasajero in currentViaje.pasajeros">
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                    <a ui-sref="usuarioDetail({usuarioId: usuario.id})" class="thumb">{{pasajeros.name}}</a>
+                </dd>
+               </-->
                 <dd ng-repeat="pasajero in currentViaje.pasajeros">
                     <span class="glyphicon glyphicon-star-empty"></span>
-                    <h3>Id de pasajero: {{pasajero.id}}</h3>
-                    <h4>{{pasajero.name}}</h4>
+                  <!-->  <h3>Id de pasajero: {{pasajero.id}}</h3>
+                    <h4>{{pasajero.name}}</h4></-->
                 </dd>
 
             </dl>

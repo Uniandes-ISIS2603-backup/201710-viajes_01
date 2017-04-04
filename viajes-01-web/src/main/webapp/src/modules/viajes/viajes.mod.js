@@ -10,7 +10,7 @@
                 url: '/viajes',
                 abstract: true,
                 resolve: {
-                    authors: ['$http', function ($http) {
+                    viajes: ['$http', function ($http) {
                             return $http.get('data/viajes.json');
                         }]
                 },
@@ -39,7 +39,7 @@
                 views: {
                     'listView': {
                         resolve: {
-                            ciudades: ['$http', function ($http) {
+                            viajes: ['$http', function ($http) {
                                     return $http.get('data/viajes.json');
                                 }]
                         },
