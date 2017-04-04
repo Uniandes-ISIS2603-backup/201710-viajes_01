@@ -15,7 +15,7 @@
                     }]
                 },
                 views: {
-                    templateUrl: basepath + 'vehiculos.html',
+                    templateUrl: basePath + 'vehiculos.html',
                     controller: ['$scope', 'vehiculos', function ($scope, vehiculos) {
                             $scope.vehiculosRecords = vehiculos.data;
                     }]
