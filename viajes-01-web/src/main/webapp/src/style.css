@@ -7,16 +7,19 @@ and open the template in the editor.
     Created on : 03-abr-2017, 12:05:40
     Author     : ac.fandino10
 */
-
-#header{
-    padding-top:50px;
+#abajo{
+    padding-bottom: 100px;
 }
 .circle{
     border-radius:50%;
 }
 .central
 {
-	padding-top: 150px;
-	padding-left: 400px;
-	padding-right: 400px;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.down{
+	padding-bottom: 150px;
 }
