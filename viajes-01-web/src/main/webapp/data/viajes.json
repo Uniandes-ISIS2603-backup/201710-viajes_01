@@ -22,8 +22,7 @@
                    "name": "Potro Calmancio"}
                  ,{"id": 3,
                    "name": "Arrrrberto"}]
-    },
-    {
+    },{
         "id":2,
         "ciudadOrigen": "Cartagena",
         "ciudadDestino": "Bogota",
@@ -49,8 +48,7 @@
                  ,{"id": 4,
                    "name": "Gerardo"}]
             
-    },
-    {
+    },{
         "id":3,
         "ciudadOrigen": "Medellin",
         "ciudadDestino": "Cartagena",
@@ -73,8 +71,7 @@
                    "name": "Elba Arquito"}
                  ,{"id": 3,
                    "name": "Camila"}]
-    },
-    {
+    },{
         "id":4,
         "ciudadOrigen": "Cali",
         "ciudadDestino": "Bogota",
