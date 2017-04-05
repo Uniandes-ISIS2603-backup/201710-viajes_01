@@ -7,7 +7,11 @@
 
     ]);
     
-    
+   var loggedIn = false;
+
+	app.controller('MainController', function(){
+		this.loggedIn = false;
+	});
     
     // Resuelve problemas de las promesas
     app.config(['$qProvider', function ($qProvider) {

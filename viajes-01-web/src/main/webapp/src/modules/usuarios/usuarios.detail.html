@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="thumb">
-               <!-- <img class="img-responsive" ng-src="{{currentCiudad.image}}"/> -->
+               <!-- <img class="img-responsive" ng-src="{{currentUsuario.fotoPerfil}}"/> -->
                <h1>{{currentUsuario.nombre}}</h1>
             </div>
 
@@ -31,22 +31,9 @@
                 <dd>{{currentUsuario.telefono}}</dd>
                 
                 <hr>
-                <dt>Nombre</dt>
+                <dt>Licencia</dt>
                 <dd>{{currentUsuario.licencia}}</dd>
-                
-                <hr>
-                <dt>Viajes de Ida</dt>
-                <dd ng-repeat="viajei in currentCiudad.viajeIda">
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    <a ui-sref="viajeDetail({viajeId: viajei.id})" class="thumb">{{viajei.name}}</a>
-                </dd>
-                
-                <hr>
-                <dt>Viajes de vuelta</dt>
-                <dd ng-repeat="viajev in currentCiudad.viajeVuelta">
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    <a ui-sref="viajeDetail({viajeId: viajev.id})" class="thumb">{{viajev.name}}</a>
-                </dd>
+                                
 
             </dl>
         </div>
