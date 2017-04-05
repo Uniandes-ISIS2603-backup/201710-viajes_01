@@ -48,7 +48,7 @@ public class ViajeResource {
     }
     
     @POST
-    public ViajeDTO createViaje(ViajeDTO viajeDTO) throws Exception{
+    public ViajeDTO createViaje(ViajeDTO viajeDTO) throws HTTPException{
         
        
         ViajeEntity viaje = viajeDTO.toEntity();
