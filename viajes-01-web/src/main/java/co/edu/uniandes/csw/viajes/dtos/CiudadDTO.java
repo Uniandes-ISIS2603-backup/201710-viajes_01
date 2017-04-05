@@ -27,8 +27,8 @@ public class CiudadDTO implements Serializable{
     if(entity != null){
         this.id = entity.getId();
         this.nombre = entity.getNombre();
-//        this.viajeIda = entity.getViajeIda();
-//        this.viajeVuelta = entity.getViajeVuelta();
+        this.viajeIda = entity.getViajeIda();
+        this.viajeVuelta = entity.getViajeVuelta();
     }
     
 }
@@ -37,8 +37,8 @@ public CiudadEntity toEntity(){
     CiudadEntity entity = new CiudadEntity();
     entity.setId(id);
     entity.setNombre(nombre);
-//    entity.setViajeIda(viajeIda);
-//    entity.setViajeVuelta(viajeVuelta);
+    entity.setViajeIda(viajeIda);
+    entity.setViajeVuelta(viajeVuelta);
     return entity;
 }
 

@@ -9,9 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ViajeDTO implements Serializable{
  
-    private Long id; 
-    private String ciudadOrigen;
-    private String  ciudadDestino;
+    private Long id;
     private String direccionRecoger;
     private String direccionDejar;
     private Date fechaPartida;
@@ -31,8 +29,6 @@ public class ViajeDTO implements Serializable{
   public ViajeDTO(ViajeEntity entity){
        if(entity != null){
         this.id = entity.getId();
-        this.ciudadOrigen = entity.getCiudadOrigen();
-        this.ciudadDestino = entity.getCiudadDestino();
         this.direccionRecoger = entity.getDireccionRecoger();
         this.direccionDejar = entity.getDireccionDejar();
         this.fechaPartida = entity.getFechaPartida();
@@ -50,8 +46,6 @@ public class ViajeDTO implements Serializable{
   public ViajeEntity toEntity(){
     ViajeEntity entity = new ViajeEntity();
     entity.setId(id);
-    entity.setCiudadOrigen(ciudadOrigen);
-    entity.setCiudadDestino(ciudadDestino);
     entity.setDireccionRecoger(direccionRecoger);
     entity.setFechaPartida(fechaPartida);
     entity.setFechaLlegada(fechaLlegada);
@@ -73,23 +67,7 @@ public class ViajeDTO implements Serializable{
     public void setId(Long id) {
         this.id = id;
     }
-
-    public String getCiudadOrigen() {
-        return ciudadOrigen;
-    }
-
-    public void setCiudadOrigen(String ciudadOrigen) {
-        this.ciudadOrigen = ciudadOrigen;
-    }
-
-    public String getCiudadDestino() {
-        return ciudadDestino;
-    }
-
-    public void setCiudadDestino(String ciudadDestino) {
-        this.ciudadDestino = ciudadDestino;
-    }
-
+    
     public String getDireccionRecoger() {
         return direccionRecoger;
     }
