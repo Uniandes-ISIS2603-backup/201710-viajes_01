@@ -1,6 +1,7 @@
 
 package co.edu.uniandes.csw.viajes.entities;
 
+// TODO: eliminar los import que no se usan
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -10,12 +11,14 @@ public class CiudadEntity extends BaseEntity{
     
     
     private String nombre;
-        
-    @OneToMany(mappedBy ="ciudadOrigen")
-    private List<ViajeEntity> viajeIda;
     
-    @OneToMany(mappedBy ="ciudadDestino")
-    private List<ViajeEntity> viajeVuelta;
+    // TODO: implementar las relaciones con otras clases
+    
+    //@OneToMany(mappedBy ="ciudadOrigen")
+    //private List<ViajeEntity> viajeIda;
+    
+    //@OneToMany(mappedBy ="ciudadDestino")
+    //private List<ViajeEntity> viajeVuelta;
 
 
     public String getNombre() {
@@ -26,7 +29,7 @@ public class CiudadEntity extends BaseEntity{
         this.nombre = nombre;
     }
 
-    
+    /*
     public List<ViajeEntity> getViajeIda() {
         return viajeIda;
     }
@@ -42,7 +45,7 @@ public class CiudadEntity extends BaseEntity{
     public void setViajeVuelta(List<ViajeEntity> viajeVuelta) {
         this.viajeVuelta = viajeVuelta;
     }
-
+*/
     
      public boolean equals(Object obj) {
         if (this.getId() != null) {

@@ -12,10 +12,10 @@ import javax.persistence.TemporalType;
 @Entity
 public class ViajeEntity extends BaseEntity{
     
-    @ManyToOne
-    private CiudadEntity ciudadOrigen;
-    @ManyToOne
-    private CiudadEntity ciudadDestino;
+    //@ManyToOne
+    private String ciudadOrigen;
+    //@ManyToOne
+    private String ciudadDestino;
     private String direccionRecoger;
     private String direccionDejar;
     
@@ -44,19 +44,19 @@ public class ViajeEntity extends BaseEntity{
     private List<ReservaEntity> pasajeros;
     
 
-    public CiudadEntity getCiudadOrigen() {
+    public String getCiudadOrigen() {
         return ciudadOrigen;
     }
 
-    public void setCiudadOrigen(CiudadEntity ciudadOrigen) {
+    public void setCiudadOrigen(String ciudadOrigen) {
         this.ciudadOrigen = ciudadOrigen;
     }
 
-    public CiudadEntity getCiudadDestino() {
+    public String getCiudadDestino() {
         return ciudadDestino;
     }
 
-    public void setCiudadDestino(CiudadEntity ciudadDestino) {
+    public void setCiudadDestino(String ciudadDestino) {
         this.ciudadDestino = ciudadDestino;
     }
 

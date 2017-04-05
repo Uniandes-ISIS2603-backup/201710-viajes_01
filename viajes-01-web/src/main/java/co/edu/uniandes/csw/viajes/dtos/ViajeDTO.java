@@ -1,7 +1,6 @@
 
 package co.edu.uniandes.csw.viajes.dtos;
 
-import co.edu.uniandes.csw.viajes.entities.CiudadEntity;
 import co.edu.uniandes.csw.viajes.entities.ViajeEntity;
 import java.io.Serializable;
 import java.util.Date;
@@ -10,9 +9,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ViajeDTO implements Serializable{
  
-    private Long id;
-    private CiudadEntity ciudadOrigen;
-    private CiudadEntity ciudadDestino;
+    private Long id; 
+    private String ciudadOrigen;
+    private String  ciudadDestino;
     private String direccionRecoger;
     private String direccionDejar;
     private Date fechaPartida;
@@ -74,7 +73,23 @@ public class ViajeDTO implements Serializable{
     public void setId(Long id) {
         this.id = id;
     }
-    
+
+    public String getCiudadOrigen() {
+        return ciudadOrigen;
+    }
+
+    public void setCiudadOrigen(String ciudadOrigen) {
+        this.ciudadOrigen = ciudadOrigen;
+    }
+
+    public String getCiudadDestino() {
+        return ciudadDestino;
+    }
+
+    public void setCiudadDestino(String ciudadDestino) {
+        this.ciudadDestino = ciudadDestino;
+    }
+
     public String getDireccionRecoger() {
         return direccionRecoger;
     }
@@ -162,20 +177,6 @@ public class ViajeDTO implements Serializable{
     public void setNumPasajeros(int numPasajeros) {
         this.numPasajeros = numPasajeros;
     }
-
-    public CiudadEntity getCiudadOrigen() {
-        return ciudadOrigen;
-    }
-
-    public void setCiudadOrigen(CiudadEntity ciudadOrigen) {
-        this.ciudadOrigen = ciudadOrigen;
-    }
-
-    public CiudadEntity getCiudadDestino() {
-        return ciudadDestino;
-    }
-
-    public void setCiudadDestino(CiudadEntity ciudadDestino) {
-        this.ciudadDestino = ciudadDestino;
-    }
+    
+    
 }

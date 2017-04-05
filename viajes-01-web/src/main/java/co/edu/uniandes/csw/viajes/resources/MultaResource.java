@@ -18,7 +18,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.xml.ws.http.HTTPException;
 
-@Path("/multas")
+@Path("/usuarios/id: \\d+/multas")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class MultaResource {

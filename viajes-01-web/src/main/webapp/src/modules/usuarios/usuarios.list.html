@@ -4,7 +4,8 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Nuemero</th> 
+                    <th>Foto</th>
+                    <th>Numero</th> 
                     <th>Nombre</th> 
                     <th>Email</th> 
                     <th>Telefono</th>
@@ -14,12 +15,13 @@
             </thead>
             <tbody>
                 <tr ng-repeat="usuario in usuariosRecords">
-                    <td id="{{$index}}-id">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.id}}</a></td>
-                    <td id="{{$index}}-numero">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.numero}}</a></td>  
-                    <td id="{{$index}}-nombre">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.nombre}}</a></td>  
-                    <td id="{{$index}}-email">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.email}}</a></td>
-                    <td id="{{$index}}-telefono">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.telefono}}</a></td>
-                    <td id="{{$index}}-licencia">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.licencia}}</a></td>
+                    <td id="{{$index}}-id">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.nombre}}</a></td>
+                    <td id="{{$index}}-image">{{usuario.image}}</td>
+                    <td id="{{$index}}-numero">{{usuario.numero}}</td>  
+                    <td id="{{$index}}-nombre">{{usuario.nombre}}</td>  
+                    <td id="{{$index}}-email">{{usuario.email}}</td>
+                    <td id="{{$index}}-telefono">{{usuario.telefono}}</td>
+                    <td id="{{$index}}-licencia">{{usuario.licencia}}</td>
                 </tr>
             </tbody>
         </table>
