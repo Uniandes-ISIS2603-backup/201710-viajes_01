@@ -11,7 +11,7 @@
                 url: '/usuarios',
                 abstract: true,
                 resolve: {
-                    ciudades: ['$http', function ($http) {
+                    usuarios: ['$http', function ($http) {
                             return $http.get('data/usuarios.json');
                         }]
                 },
