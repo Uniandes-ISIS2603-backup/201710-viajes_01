@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -32,8 +33,7 @@ public class MultaEntity extends BaseEntity {
    @Temporal(TemporalType.DATE)
    private Date fechaPago;
    
-   // TODO: revisar la relación. un usuario solo puede tener una multa (en toda su vida)?
-   @OneToOne
+   @ManyToOne
    private UsuarioEntity usuario;
    
    @OneToOne

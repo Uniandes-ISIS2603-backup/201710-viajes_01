@@ -3,6 +3,7 @@ package co.edu.uniandes.csw.viajes.entities;
 
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -21,8 +22,8 @@ public class UsuarioEntity extends BaseEntity{
     private int telefono;
     private String licencia;
     
-    @OneToOne
-    private MultaEntity multa;
+    @OneToMany(mappedBy = "usuario")
+    private List<MultaEntity> multas;
     
     @OneToMany(mappedBy = "usuario")
     private List<VehiculoEntity> vehiculos;
@@ -71,12 +72,12 @@ public class UsuarioEntity extends BaseEntity{
         this.licencia = licencia;
     }
 
-    public MultaEntity getMulta() {
-        return multa;
+    public List<MultaEntity> getMulta() {
+        return multas;
     }
 
-    public void setMulta(MultaEntity multa) {
-        this.multa = multa;
+    public void setMulta(List<MultaEntity> multas) {
+        this.multas = multas;
     }
 
     public List<VehiculoEntity> getVehiculos() {
