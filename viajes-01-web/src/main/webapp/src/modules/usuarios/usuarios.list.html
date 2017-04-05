@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="col-sm-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nuemero</th> 
+                    <th>Nombre</th> 
+                    <th>Email</th> 
+                    <th>Telefono</th>
+                    <th>Licencia</th> 
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="usuario in usuariosRecords">
+                    <td id="{{$index}}-id">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.nombre}}</a></td>
+                    <td id="{{$index}}-numero">{{usuario.numero}}</td>  
+                    <td id="{{$index}}-nombre">{{usuario.nombre}}</td>  
+                    <td id="{{$index}}-email">{{usuario.email}}</td>
+                    <td id="{{$index}}-telefono">{{usuario.telefono}}</td>
+                    <td id="{{$index}}-licencia">{{usuario.licencia}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
