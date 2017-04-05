@@ -3,7 +3,8 @@
         // External dependencies
         'ui.router','multaModule','ciudadModule', 'viajeModule',
         'vehiculoModule',
-        'reservaModule','usuarioModule'
+        //'reservaModule',
+        'usuarioModule'
 
     ]);
     

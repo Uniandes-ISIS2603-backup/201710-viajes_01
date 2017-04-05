@@ -23,6 +23,7 @@ public class MultaLogic {
 
     
     public MultaEntity createMulta(MultaEntity entity) {
+            
         persistence.create(entity);
         return entity;
     }
