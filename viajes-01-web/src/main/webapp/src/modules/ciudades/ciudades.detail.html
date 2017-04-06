@@ -1,13 +1,12 @@
 <div class="panel panel-default"> 
     <div class="panel-body">
-    <div class="row">
-        <div class="col-md-3">
-            <h1>{{currentCiudad.nombre}}</h1>
-            <div class="thumb">
+        <div class="row">
+            <div class="col-md-3">
+                <h1>{{currentCiudad.nombre}}</h1>
+                <div class="thumb">
                     <img class="img-responsive img-rounded" ng-src="{{currentCiudad.img}}" ng-if="currentCiudad.img"/>
+                </div>
             </div>
-
-        </div>
         <div class="col-md-3">
             <dl>
                 <hr>
@@ -32,9 +31,9 @@
                     <a ui-sref="viajeDetail({viajeId: viajev.id})" class="thumb">{{viajev.name}}</a>
                 </dd>
 
-            </dl>
+                </dl>
+            </div>
         </div>
     </div>
-        </div>
 </div>
 

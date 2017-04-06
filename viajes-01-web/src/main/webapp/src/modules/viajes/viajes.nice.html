@@ -1,5 +1,8 @@
 <div class="container-fluid">
-    <h1>Viajes</h1>
+    <div class="jumbotron">
+        <h1>Viajes</h1> 
+        <p>Wow. Si llegaste hasta aqu&iacute es porque est&aacutes m&aacutes que decidido a viajar y nos encanta que pienses as&iacute !! S&oacutelo falta alistar la maleta !! Adelante, &eacutechale un vistazo a los viajes que est&aacuten disponibles en este momento para ver cu&aacutel se acomoda a tus necesidades. </p> 
+    </div>
     <div class="row row-offcanvas row-offcanvas-right">
 	<div class="col-xs-12 col-sm-9 col-md-12">
             <div class="row">
@@ -9,20 +12,13 @@
                         <h3><a ui-sref="viajeDetail({viajeId: viaje.id})">ID del Viaje: {{viaje.id}}</a></h3>
                     </div>
                     <div class="panel-body">
-                        <n>Ciudad de Origen</n>
+                        <h4>Ciudad de Origen</h4>
                         {{viaje.ciudadOrigen}}
+                        <h4>Ciudad de Destino</h4>
                         {{viaje.ciudadDestino}}
-                        <p>{{viaje.direccionRecoger}}</p>
-                        <p>{{viaje.direccionDejar}}</p>
-                        <p>{{viaje.fechaPartida|date:'dd/MM/yyyy'}}</p>
-                        <p>{{viaje.fechaLlegada|date:'dd/MM/yyyy'}}</p>
-                        <p>{{viaje.kilometros}}</p>
-                        <p>{{viaje.gastoGasolina}}</p>
-                        <p>{{viaje.gastoPeaje}}</p>
+                        <h4>Gastos</h4>
                         <p>{{viaje.gastoOtros}}</p>
-                        <p>{{viaje.numPasajeros}}</p>
-                        <p>{{viaje.horaSalida}}</p>
-                        <p>{{viaje.horaLlegada}}</p>
+                        <h4>Cacharrito</h4>
                         <p>{{viaje.vehiculo.name}}</p>
                     </div>
                     </div>

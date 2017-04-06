@@ -21,20 +21,20 @@
             </thead>
             <tbody>
                 <tr ng-repeat="viaje in viajesRecords">
-                    <td id="{{$index}}-id">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.id}}</a></td>
-                    <td id="{{$index}}-ciudadOrigen">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.ciudadOrigen}}</a></td>
-                    <td id="{{$index}}-ciudadDestino">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.ciudadDestino}}</a></td>       
-                    <td id="{{$index}}-direccionRecoger">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.direccionRecoger}}</a></td>       
-                    <td id="{{$index}}-direccionDejar">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.direccionDejar}}</a></td>       
-                    <td id="{{$index}}-fechaPartida">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.fechaPartida}}</a></td>       
-                    <td id="{{$index}}-fechaLlegada">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.fechaLlegada}}</a></td>    
-                    <td id="{{$index}}-kilometros">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.kilometros}}</a></td>       
-                    <td id="{{$index}}-gastoGasolina">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.gastoGasolina}}</a></td>       
-                    <td id="{{$index}}-gastoPeaje">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.gastoPeaje}}</a></td>       
-                    <td id="{{$index}}-gastoOtros">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.gastoOtros}}</a></td>       
-                    <td id="{{$index}}-numPasajeros">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.numPasajeros}}</a></td>       
-                    <td id="{{$index}}-horaSalida">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.horaSalida}}</a></td>       
-                    <td id="{{$index}}-horaLlegada">   <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.horaLlegada}}</a></td>  
+                    <td id="{{$index}}-id"> <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.id}}</a></td>
+                    <td id="{{$index}}-ciudadOrigen"> {{viaje.ciudadOrigen}}</td>
+                    <td id="{{$index}}-ciudadDestino"> {{viaje.ciudadDestino}}</td>       
+                    <td id="{{$index}}-direccionRecoger"> {{viaje.direccionRecoger}}</td>       
+                    <td id="{{$index}}-direccionDejar"> {{viaje.direccionDejar}}</td>       
+                    <td id="{{$index}}-fechaPartida"> {{viaje.fechaPartida}}</td>       
+                    <td id="{{$index}}-fechaLlegada"> {{viaje.fechaLlegada}}</td>    
+                    <td id="{{$index}}-kilometros"> {{viaje.kilometros}}</td>       
+                    <td id="{{$index}}-gastoGasolina"> {{viaje.gastoGasolina}}</td>       
+                    <td id="{{$index}}-gastoPeaje"> {{viaje.gastoPeaje}}</td>       
+                    <td id="{{$index}}-gastoOtros"> {{viaje.gastoOtros}}</td>       
+                    <td id="{{$index}}-numPasajeros"> {{viaje.numPasajeros}}</td>       
+                    <td id="{{$index}}-horaSalida"> {{viaje.horaSalida}}</td>       
+                    <td id="{{$index}}-horaLlegada"> {{viaje.horaLlegada}}</td>  
                 </tr>
             </tbody>
         </table>

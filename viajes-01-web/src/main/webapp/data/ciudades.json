@@ -80,7 +80,7 @@
     },
     {
         "id":2,
-        "descripcion":"Medellín es un municipio colombiano, capital del departamento de Antioquia. Es la ciudad más poblada del departamento y la segunda del país.7 Se asienta en la parte más ancha de la región natural conocida como Valle de Aburrá, en la cordillera central de los Andes, constituyéndose como el mayor centro urbano de tal ramal andino. Se extiende a ambas orillas del río Medellín -llamado también río Aburrá-, que la atraviesa de sur a norte, y es el núcleo principal del área metropolitana del Valle de Aburrá.8 La ciudad tiene una población de 2 508 452 habitantes (2017).",
+        "descripcion":"Medellín es un municipio colombiano, capital del departamento de Antioquia. Es la ciudad más poblada del departamento y la segunda del país.7 Se asienta en la parte más ancha de la región natural conocida como Valle de Aburrá, en la cordillera central de los Andes, constituyéndose como el mayor centro urbano de tal ramal andino. Se extiende a ambas orillas del río Medellín -llamado también río Aburrá-, que la atraviesa de sur a norte.",
         "img":"http://www.eluniversal.com.co/sites/default/files/201501/medellin.jpg",
         "active":true,
         "nombre": "Medellin",
