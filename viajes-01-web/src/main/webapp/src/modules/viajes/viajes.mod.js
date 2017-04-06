@@ -30,6 +30,14 @@
                         templateUrl: basePath + 'viajes.list.html'
                     }
                 }
+            }).state('viajesNice', {
+                url: '/nice',
+                parent: 'viajes',
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'viajes.nice.html'
+                    }
+                }
             }).state('viajeDetail', {
                 url: '/{viajeId:int}/detail',
                 parent: 'viajes',

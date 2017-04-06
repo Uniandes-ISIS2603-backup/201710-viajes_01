@@ -31,6 +31,15 @@
                         templateUrl: basePath + 'ciudades.list.html'
                     }
                 }
+            }).state('ciudadesNice', {
+                url: '/nice',
+                parent: 'ciudades',
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'ciudades.nice.html'
+                    }
+                }
+                
             }).state('ciudadDetail', {
                 url: '/{ciudadId:int}/detail',
                 parent: 'ciudades',
