@@ -1,6 +1,9 @@
 [   
     {
         "id":1,
+        "active":true,
+        "descripcion":"Está ubicada en el centro de Colombia, en la región natural conocida como la sabana de Bogotá, que hace parte del altiplano cundiboyacense, formación ubicada en la cordillera Oriental de los Andes. Es la tercera capital más alta en América del Sur (después de La Paz y Quito), a un promedio de 2625 metros sobre el nivel del mar.",
+        "img": "https://static01.nyt.com/images/2015/11/08/travel/08HOURS3/08HOURS3-jumbo.jpg",
         "nombre": "Bogota",
         "viajeIda":[ {
                         "id":1,
@@ -77,6 +80,9 @@
     },
     {
         "id":2,
+        "descripcion":"Medellín es un municipio colombiano, capital del departamento de Antioquia. Es la ciudad más poblada del departamento y la segunda del país.7 Se asienta en la parte más ancha de la región natural conocida como Valle de Aburrá, en la cordillera central de los Andes, constituyéndose como el mayor centro urbano de tal ramal andino. Se extiende a ambas orillas del río Medellín -llamado también río Aburrá-, que la atraviesa de sur a norte, y es el núcleo principal del área metropolitana del Valle de Aburrá.8 La ciudad tiene una población de 2 508 452 habitantes (2017).",
+        "img":"http://www.eluniversal.com.co/sites/default/files/201501/medellin.jpg",
+        "active":true,
         "nombre": "Medellin",
         "viajeIda":[   {
                             "id":3,
@@ -106,6 +112,9 @@
     },
     {
         "id":3,
+        "descripcion":"Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias abreviado Cartagena de Indias, D. T. y C., es la capital del departamento de Bolívar, Colombia.6 Fue fundada el 1.° de junio de 1533 por Pedro de Heredia.7 Desde 1991 Cartagena es un Distrito Turístico y Cultural.8 La ciudad está localizada a orillas del mar Caribe.",
+        "img":"http://multidestinos.co/wp-content/uploads/2016/02/Cartagena-producto.jpg",
+        "active":true,
         "nombre": "Cartagena",
         "viajeIda":[ {
                         "id":2,
@@ -160,6 +169,9 @@
     },
     {
         "id":4,
+        "descripcion":"Cali, oficialmente Santiago de Cali,3 es un municipio colombiano, capital del departamento del Valle del Cauca 3 y la tercera ciudad más poblada de Colombia. Está situada en la región Sur del Valle del Cauca, entre la cordillera occidental y la cordillera central de los Andes. La ciudad forma parte del Área Metropolitana de Cali, junto con los municipios aledaños a esta.8 Fue fundada el 25 de julio de 1536 por Sebastián de Belalcázar, lo que la convierte en una de las ciudades más antiguas de América.",
+        "img":"http://www.analfe.org.co/sites/default/files/cali.jpg",
+        "active":true,
         "nombre": "Cali",
         "viajeIda":[ {
                         "id":4,

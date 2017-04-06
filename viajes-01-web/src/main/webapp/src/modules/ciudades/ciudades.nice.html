@@ -1,21 +1,28 @@
 <div class="container head">
-    <div class="row row-offcanvas row-offcanvas-right">
-	<div class="col-xs-12 col-sm-9">
+    <div class="jumbotron">
+        <h1>Ciudades</h1> 
+        <p>Para nosotros es realmente importante que puedas ir d&oacutende quieras !! ¿Acaso quieres conocer la playa? ¿Conocer el metro de Colombia? Que delicia poder viajar ! Es por esto que a continuaci&oacuten te mostramos las principales ciudades de nuestro servicio.</p> 
+    </div>
+    <div class="row">
+	<div class="col-xs-12 col-sm-9 col-md-12">
             <div class="row">
 		<div class="col-xs-6 col-lg-4" ng-repeat="ciudad in ciudadesRecords">
-                    <h1>{{ciudad.nombre}}</h1>
-			<p>
-                            Lorem ipsum dolor sit amet, 
-                            in nibh at elit eleifend nullam suspendisse, 
-                            molestie eget neque, pulvinar nulla odio sociosqu, 
-                            aliquam egestas malesuada mauris. Neque massa nulla 
-                            integer rutrum eros, cras varius rutrum, eleifend sed 
-                            condimentum. Morbi aliquam eros aenean, tincidunt dui 
-                            suspendisse purus, eleifend lacus vivamus ipsum nec, 
-                            in convallis suspendisse vehicula aliquam quam. 
-                            Nostra mollis faucibus turpis, pharetra purus magna ut, 
-                            felis elit molestie ipsum. 
-			</p>
+                    
+                    <div class="panel panel-default">
+                    <div ng-hide="ciudad.active" ng-click="ciudad.active=true">
+                        
+                        <div class="panel-heading">
+                        <h1><a ui-sref="ciudadDetail({ciudadId: ciudad.id})">{{ciudad.nombre}}</a></h1>
+			<p>{{ciudad.descripcion}}</p>
+                        </div>
+                    </div>
+                    <div class="circle" ng-show="ciudad.active" ng-click="ciudad.active=false">
+                        <div class="panel-body">
+                        <div class="thumb">
+                        <img class="img-responsive img-rounded" ng-src="{{ciudad.img}}" ng-if="ciudad.img"/>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 	</div>

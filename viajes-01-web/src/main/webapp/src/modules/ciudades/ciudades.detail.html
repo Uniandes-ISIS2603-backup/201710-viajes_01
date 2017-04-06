@@ -2,9 +2,9 @@
     <div class="panel-body">
     <div class="row">
         <div class="col-md-3">
+            <h1>{{currentCiudad.nombre}}</h1>
             <div class="thumb">
-               <!-- <img class="img-responsive" ng-src="{{currentCiudad.image}}"/> -->
-               <h1>{{currentCiudad.nombre}}</h1>
+                    <img class="img-responsive img-rounded" ng-src="{{currentCiudad.img}}" ng-if="currentCiudad.img"/>
             </div>
 
         </div>
