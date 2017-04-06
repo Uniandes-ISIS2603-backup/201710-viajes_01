@@ -31,6 +31,14 @@
                         templateUrl: basePath + 'usuarios.list.html'
                     }
                 }
+                }).state('usuariosNice', {
+                url: '/nice',
+                parent: 'usuarios',
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'usuarios.nice.html'
+                    }
+                }
             }).state('usuariosDetail', {
                 url: '/{usuariosId:int}/detail',
                 parent: 'usuarios',
