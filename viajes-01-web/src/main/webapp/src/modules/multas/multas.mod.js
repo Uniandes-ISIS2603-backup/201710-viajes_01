@@ -26,6 +26,14 @@
                             }]
                     }
                 }
+            }).state('multasNice', {
+                url: '/nice',
+                parent: 'multas',
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'multas.nice.html'
+                    }
+                }
             }).state('multasList', {
                 url: '/list',
                 parent: 'multas',
@@ -33,20 +41,13 @@
                     'listView': {
                         templateUrl: basePath + 'multas.list.html'
                     }
-                }
+                }          
             }).state('multaDetail', {
                 url: '/{multaId:int}/detail',
                 parent: 'multas',
                 param: {
                     multaId: null
-                },
-              /** 
-                 resolve:  {
-                    currentMulta: ['$http', 'multasContext', '$stateParams', function ($http, multasContext, $params) {
-                            return $http.get(multasContext+'/'+$params.multaId);
-                        }]
-                },
-                **/
+                },            
                 views: {
                     'listView': {
                       resolve: {
@@ -58,9 +59,7 @@
                         controller: ['$scope', 'multas', '$stateParams', function ($scope, multas, $params) {
                                 $scope.multasRecords = multas.data;
                                 $scope.currentMulta = $scope.multasRecords[$params.multaId - 1];
-                            }]
-      
-                        //  templateUrl: basePath + 'multas.list.html'
+                            }]      
                     },
                     'detailView': {
                         templateUrl: basePath + 'multas.detail.html',
