@@ -1,0 +1,47 @@
+[
+    {
+        "id":1,
+        "pasajeros":4,
+        "precio":20000,
+        "comision":20,
+        "usuario":{
+            "nombre":"Pepe Lopez"
+        },
+        "viaje":{
+            "ciudadOrigen":"Bogota",
+            "ciudadDestino":"Cali",
+            "fechaPartida":"12/02/2017",
+            "horaSalida":"14:54"
+        }
+    },
+    {
+        "id":2,
+        "pasajeros":4,
+        "precio":20000,
+        "comision":20,
+        "usuario":{
+            "nombre":"Pepe Cabrera"
+        },
+        "viaje":{
+            "ciudadOrigen":"Cartagena",
+            "ciudadDestino":"Bogota",
+            "fechaPartida":"01/04/2017",
+            "horaSalida":"14:54"
+        }
+    },
+    {
+        "id":3,
+        "pasajeros":3,
+        "precio":15000,
+        "comision":15,
+        "usuario":{
+            "nombre":"Maria Quintero"
+        },
+        "viaje":{
+            "ciudadOrigen":"Bogota",
+            "ciudadDestino":"Medellin",
+            "fechaPartida":"01/05/2017",
+            "horaSalida":"16:00"
+        }
+    }
+]
