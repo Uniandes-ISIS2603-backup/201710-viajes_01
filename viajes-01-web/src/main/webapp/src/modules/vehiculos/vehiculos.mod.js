@@ -24,7 +24,7 @@
                 }
             }).state('vehiculosList',{
                 url: '/list',
-                parent: 'viajes',
+                parent: 'vehiculos',
                 views: {
                     'listView': {
                         templateUrl: basePath + 'vehiculos.list.html'
@@ -58,7 +58,7 @@
                         }]
                     },
                     'detailView': {
-                        templateUrl: basePathVehiculos + 'vehiculos.detail.html',
+                        templateUrl: basePath + 'vehiculos.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
                                 $scope.currentVehiculo = $scope.vehiculosRecords[$params.vehiculoId - 1];
                             }]
