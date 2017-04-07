@@ -15,6 +15,7 @@
         
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
         <script type="text/javascript" src="src/app.js"></script>
         
         <!-- Injections -->
@@ -25,6 +26,9 @@
         <script src="src/modules/vehiculos/vehiculos.mod.js" type="text/javascript"></script>
         <script src="src/modules/reservas/reservas.mod.js" type="text/javascript"></script>
         <script src="src/modules/usuarios/usuarios.mod.js" type="text/javascript"></script>
+        <script src="src/modules/usuarios/usuarios.delete.ctrl.js"></script>
+        <script src="src/modules/usuarios/usuarios.edit.ctrl.js"></script>
+        <script src="src/modules/usuarios/usuarios.detail.ctrl.js"></script>
         
     </head>
     <body ng-controller="MainController">
@@ -38,7 +42,7 @@
                     <li role="presentation"><a ui-sref="ciudadesNice">Ciudades</a></li>
                     <li role="presentation"><a ui-sref="viajesNice">Viajes</a></li>
                     <li role="presentation"><a ui-sref="usuariosNice">Usuarios</a></li>
-                    <li role="navigation"><a ui-sref="vehiculosList">Vehiculos</a></li>
+                    <li role="presentation"><a ui-sref="vehiculosList">Vehiculos</a></li>
                     <li role="presentation"><a ui-sref=reservasList">Reservas</a></li>
 		<!--<li>
                     <form class="navbar-form navbar-left">
