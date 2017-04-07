@@ -15,10 +15,12 @@
                     }]
                 },
                 views: {
-                    templateUrl: basePath + 'vehiculos.html',
-                    controller: ['$scope', 'vehiculos', function ($scope, vehiculos) {
-                            $scope.vehiculosRecords = vehiculos.data;
-                    }]
+                    'mainView': {
+                        templateUrl: basePath + 'vehiculos.html',
+                        controller: ['$scope', 'vehiculos', function ($scope, vehiculos) {
+                                $scope.vehiculosRecords = vehiculos.data;
+                        }]
+                    }
                 }
             }).state('vehiculosList',{
                 url: '/list',
@@ -26,6 +28,14 @@
                 views: {
                     'listView': {
                         templateUrl: basePath + 'vehiculos.list.html'
+                    }
+                }
+            }).state('vehiculosNice', {
+                url: '/nice',
+                parent: 'vehiculos',
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'vehiculos.nice.html'
                     }
                 }
             }).state('vehiculoDetail', {
