@@ -15,7 +15,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="usuario in usuariosRecords">
-                    <td id="{{$index}}-id">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.nombre}}</a></td>
+                    <td id="{{$index}}-id">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.id}}</a></td>
                     <td id="{{$index}}-image">{{usuario.image}}</td>
                     <td id="{{$index}}-numero">{{usuario.numero}}</td>  
                     <td id="{{$index}}-nombre">{{usuario.nombre}}</td>  

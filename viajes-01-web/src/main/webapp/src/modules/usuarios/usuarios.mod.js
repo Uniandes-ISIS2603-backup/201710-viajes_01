@@ -4,7 +4,6 @@
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             var basePath = 'src/modules/usuarios/';
             var basePathUsuarios = 'src/modules/usuarios/';
-            var basePathViajes = 'src/modules/viajes/';
             $urlRouterProvider.otherwise("/usuariosList");
 
             $stateProvider.state('usuarios', {
@@ -31,7 +30,7 @@
                         templateUrl: basePath + 'usuarios.list.html'
                     }
                 }
-                }).state('usuariosNice', {
+            }).state('usuariosNice', {
                 url: '/nice',
                 parent: 'usuarios',
                 views: {
@@ -39,11 +38,11 @@
                         templateUrl: basePath + 'usuarios.nice.html'
                     }
                 }
-            }).state('usuariosDetail', {
-                url: '/{usuariosId:int}/detail',
+            }).state('usuarioDetail', {
+                url: '/{usuarioId:int}/detail',
                 parent: 'usuarios',
                 param: {
-                    usuariosId: null
+                    usuarioId: null
                 },
                 views: {
                     'listView': {
@@ -61,7 +60,7 @@
                     'detailView': {
                         templateUrl: basePath + 'usuarios.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentUsuario = $scope.usuariosRecords[$params.usuariosId - 1];
+                                $scope.currentUsuario = $scope.usuariosRecords[$params.usuarioId - 1];
                             }]
                     }
                 }

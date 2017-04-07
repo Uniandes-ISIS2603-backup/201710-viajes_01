@@ -1,16 +1,18 @@
 <div class="panel panel-default"> 
     <div class="panel-body">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-sm-3 col-md-5">
             <div class="thumb">
-                <img class="img-responsive img-rounded" ng-src="{{currentUsuario.imgage}}" ng-if="currentUsuario.img"/>
-               <!-- <img class="img-responsive" ng-src="{{currentCiudad.image}}"/> -->
-               <h1>{{currentUsuario.nombre}}</h1>
+               <h1>Nombre del Usuario: {{currentUsuario.nombre}}</h1>
             </div>
 
         </div>
-        <div class="col-md-3">
+        <div class="col-sm-6 col-md-4">
             <dl>
+                <hr>
+                <dt>Nombre</dt>
+                <dd>{{currentUsuario.nombre}}</dd>
+                
                 <hr>
                 <dt>Id del Usuario</dt>
                 <dd>{{currentUsuario.id}}</dd>
@@ -22,13 +24,7 @@
                 <hr>
                 <dt>Numero</dt>
                 <dd>{{currentUsuario.numero}}</dd>
-                
-                
-                
-                <hr>
-                <dt>Nombre</dt>
-                <dd>{{currentUsuario.nombre}}</dd>
-                
+                             
                 <hr>
                 <dt>Email</dt>
                 <dd>{{currentUsuario.email}}</dd>
@@ -40,20 +36,7 @@
                 <hr>
                 <dt>Nombre</dt>
                 <dd>{{currentUsuario.licencia}}</dd>
-                
-                <hr>
-                <dt>Viajes de Ida</dt>
-                <dd ng-repeat="viajei in currentCiudad.viajeIda">
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    <a ui-sref="viajeDetail({viajeId: viajei.id})" class="thumb">{{viajei.name}}</a>
-                </dd>
-                
-                <hr>
-                <dt>Viajes de vuelta</dt>
-                <dd ng-repeat="viajev in currentCiudad.viajeVuelta">
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    <a ui-sref="viajeDetail({viajeId: viajev.id})" class="thumb">{{viajev.name}}</a>
-                </dd>
+               
 
             </dl>
         </div>
