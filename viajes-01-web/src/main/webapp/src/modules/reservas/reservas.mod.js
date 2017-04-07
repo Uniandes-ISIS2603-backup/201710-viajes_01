@@ -29,6 +29,14 @@
                         templateUrl: basePath + 'reservas.list.html'
                     }
                 }
+            }).state('reservasNice', {
+                url: '/nice',
+                parent: 'reservas',
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'reservas.nice.html'
+                    }
+                }
             }).state('reservaDetail', {
                 url: '/{reservaId:int}/detail',
                 parent: 'reservas',
