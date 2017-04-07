@@ -4,24 +4,18 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Foto</th>
-                    <th>Numero</th> 
+           
                     <th>Nombre</th> 
-                    <th>Email</th> 
-                    <th>Telefono</th>
-                    <th>Licencia</th> 
+                   
 
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="usuario in usuariosRecords">
                     <td id="{{$index}}-id">   <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.id}}</a></td>
-                    <td id="{{$index}}-image">{{usuario.image}}</td>
-                    <td id="{{$index}}-numero">{{usuario.numero}}</td>  
+                     
                     <td id="{{$index}}-nombre">{{usuario.nombre}}</td>  
-                    <td id="{{$index}}-email">{{usuario.email}}</td>
-                    <td id="{{$index}}-telefono">{{usuario.telefono}}</td>
-                    <td id="{{$index}}-licencia">{{usuario.licencia}}</td>
+                  
                 </tr>
             </tbody>
         </table>
