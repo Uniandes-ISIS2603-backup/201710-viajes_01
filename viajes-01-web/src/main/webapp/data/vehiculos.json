@@ -6,7 +6,7 @@
 		"color": "Verde",
 		"aseguradora": "Liberty",
 		"capacidad": 1,
-		"numSeguro": "8908249709"
+		"numSeguro": 8908249709
 	},
 	{
 		"id": 2,
@@ -15,7 +15,7 @@
 		"color": "Rojo",
 		"aseguradora": "Bolivar",
 		"capacidad": 1,
-		"numSeguro": "5098029923"
+		"numSeguro": 5098029923
 	},
 	{
 		"id": 3,
@@ -24,7 +24,7 @@
 		"color": "Verde",
 		"aseguradora": "Colpatria",
 		"capacidad": 5,
-		"numSeguro": "5167076360"
+		"numSeguro": 5167076360
 	},
 	{
 		"id": 4,
@@ -33,7 +33,7 @@
 		"color": "Plateado",
 		"aseguradora": "Sura",
 		"capacidad": 2,
-		"numSeguro": "2544464708"
+		"numSeguro": 2544464708
 	},
 	{
 		"id": 5,
@@ -42,7 +42,7 @@
 		"color": "Negro",
 		"aseguradora": "Bolivar",
 		"capacidad": 3,
-		"numSeguro": "1137783496"
+		"numSeguro": 1137783496
 	},
 	{
 		"id": 6,
@@ -51,7 +51,7 @@
 		"color": "Blanco",
 		"aseguradora": "Colpatria",
 		"capacidad": 4,
-		"numSeguro": "5295445335"
+		"numSeguro": 5295445335
 	},
 	{
 		"id": 7,
@@ -60,7 +60,7 @@
 		"color": "Verde",
 		"aseguradora": "Colpatria",
 		"capacidad": 3,
-		"numSeguro": "8298114379"
+		"numSeguro": 8298114379
 	},
 	{
 		"id": 8,
@@ -69,7 +69,7 @@
 		"color": "Rojo",
 		"aseguradora": "Sura",
 		"capacidad": 1,
-		"numSeguro": "5702576882"
+		"numSeguro": 5702576882
 	},
 	{
 		"id": 9,
@@ -78,7 +78,7 @@
 		"color": "Verde",
 		"aseguradora": "Liberty",
 		"capacidad": 4,
-		"numSeguro": "0811819275"
+		"numSeguro": 8118192750
 	},
 	{
 		"id": 10,
@@ -87,7 +87,7 @@
 		"color": "Plateado",
 		"aseguradora": "Colpatria",
 		"capacidad": 3,
-		"numSeguro": "5565433477"
+		"numSeguro": 5565433477
 	},
 	{
 		"id": 11,
@@ -96,7 +96,7 @@
 		"color": "Rojo",
 		"aseguradora": "Sura",
 		"capacidad": 4,
-		"numSeguro": "6745232166"
+		"numSeguro": 6745232166
 	},
 	{
 		"id": 12,
@@ -105,6 +105,6 @@
 		"color": "Verde",
 		"aseguradora": "Sura",
 		"capacidad": 2,
-		"numSeguro": "2883575049"
+		"numSeguro": 2883575049
 	}
 ]
