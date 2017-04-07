@@ -1,82 +1,110 @@
 [
-	{
+    {
 		"id": 1,
-		"placa": "FRN383",
-		"color": "Blanco",
+		"placa": "UIB337",
+		"marca": "Hyundai",
+		"color": "Verde",
 		"aseguradora": "Liberty",
-		"capacidad": 4,
-		"numSeguro": "8349415525"
+		"capacidad": 1,
+		"numSeguro": "8908249709"
 	},
 	{
 		"id": 2,
-		"placa": "WNQ036",
-		"color": "Azul",
-		"aseguradora": "Colpatria",
-		"capacidad": 3,
-		"numSeguro": "7800529228"
+		"placa": "CDF697",
+		"marca": "Toyota",
+		"color": "Rojo",
+		"aseguradora": "Bolivar",
+		"capacidad": 1,
+		"numSeguro": "5098029923"
 	},
 	{
 		"id": 3,
-		"placa": "AWU794",
-		"color": "Plateado",
-		"aseguradora": "Sura",
-		"capacidad": 4,
-		"numSeguro": "4741645341"
+		"placa": "IZH481",
+		"marca": "Hyundai",
+		"color": "Verde",
+		"aseguradora": "Colpatria",
+		"capacidad": 5,
+		"numSeguro": "5167076360"
 	},
 	{
 		"id": 4,
-		"placa": "KAL096",
-		"color": "Azul",
-		"aseguradora": "Liberty",
-		"capacidad": 5,
-		"numSeguro": "1952144515"
+		"placa": "UGC530",
+		"marca": "Nissan",
+		"color": "Plateado",
+		"aseguradora": "Sura",
+		"capacidad": 2,
+		"numSeguro": "2544464708"
 	},
 	{
 		"id": 5,
-		"placa": "TFL480",
-		"color": "Plateado",
-		"aseguradora": "Liberty",
-		"capacidad": 4,
-		"numSeguro": "4315588453"
+		"placa": "XNC724",
+		"marca": "Mitsubishi",
+		"color": "Negro",
+		"aseguradora": "Bolivar",
+		"capacidad": 3,
+		"numSeguro": "1137783496"
 	},
 	{
 		"id": 6,
-		"placa": "EEU595",
-		"color": "Verde",
-		"aseguradora": "Liberty",
-		"capacidad": 1,
-		"numSeguro": "8246716705"
+		"placa": "UZG986",
+		"marca": "Mitsubishi",
+		"color": "Blanco",
+		"aseguradora": "Colpatria",
+		"capacidad": 4,
+		"numSeguro": "5295445335"
 	},
 	{
 		"id": 7,
-		"placa": "MQZ827",
+		"placa": "DAD253",
+		"marca": "Mitsubishi",
 		"color": "Verde",
-		"aseguradora": "Sura",
-		"capacidad": 2,
-		"numSeguro": "7284387115"
+		"aseguradora": "Colpatria",
+		"capacidad": 3,
+		"numSeguro": "8298114379"
 	},
 	{
 		"id": 8,
-		"placa": "ANH934",
-		"color": "Plateado",
-		"aseguradora": "Bolivar",
-		"capacidad": 5,
-		"numSeguro": "0498629172"
+		"placa": "HRW264",
+		"marca": "Chevrolet",
+		"color": "Rojo",
+		"aseguradora": "Sura",
+		"capacidad": 1,
+		"numSeguro": "5702576882"
 	},
 	{
 		"id": 9,
-		"placa": "BII574",
-		"color": "Azul",
-		"aseguradora": "Bolivar",
-		"capacidad": 1,
-		"numSeguro": "3976943803"
+		"placa": "KFT608",
+		"marca": "Mitsubishi",
+		"color": "Verde",
+		"aseguradora": "Liberty",
+		"capacidad": 4,
+		"numSeguro": "0811819275"
 	},
 	{
 		"id": 10,
-		"placa": "JAB495",
+		"placa": "OTY546",
+		"marca": "Hyundai",
+		"color": "Plateado",
+		"aseguradora": "Colpatria",
+		"capacidad": 3,
+		"numSeguro": "5565433477"
+	},
+	{
+		"id": 11,
+		"placa": "GOS285",
+		"marca": "Mitsubishi",
+		"color": "Rojo",
+		"aseguradora": "Sura",
+		"capacidad": 4,
+		"numSeguro": "6745232166"
+	},
+	{
+		"id": 12,
+		"placa": "NHC372",
+		"marca": "Mitsubishi",
 		"color": "Verde",
 		"aseguradora": "Sura",
 		"capacidad": 2,
-		"numSeguro": "3827890345"
+		"numSeguro": "2883575049"
 	}
 ]

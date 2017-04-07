@@ -6,7 +6,7 @@
             var basePathVehiculos = 'src/modules/vehiculos/';
             $urlRouterProvider.otherwise("/vehiculosList");
             
-            $stateProvider.state('books', {
+            $stateProvider.state('vehiculos', {
                 url: '/vehiculos',
                 abstract: true,
                 resolve: {
@@ -22,7 +22,7 @@
                         }]
                     }
                 }
-            }).state('vehiculosList',{
+            }).state('vehiculosList', {
                 url: '/list',
                 parent: 'vehiculos',
                 views: {
