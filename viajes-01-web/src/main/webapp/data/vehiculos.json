@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+		"placa": "FRN383",
+		"color": "Blanco",
+		"aseguradora": "Liberty",
+		"capacidad": 4,
+		"numSeguro": "8349415525"
+	},
+	{
+		"id": 2,
+		"placa": "WNQ036",
+		"color": "Azul",
+		"aseguradora": "Colpatria",
+		"capacidad": 3,
+		"numSeguro": "7800529228"
+	},
+	{
+		"id": 3,
+		"placa": "AWU794",
+		"color": "Plateado",
+		"aseguradora": "Sura",
+		"capacidad": 4,
+		"numSeguro": "4741645341"
+	},
+	{
+		"id": 4,
+		"placa": "KAL096",
+		"color": "Azul",
+		"aseguradora": "Liberty",
+		"capacidad": 5,
+		"numSeguro": "1952144515"
+	},
+	{
+		"id": 5,
+		"placa": "TFL480",
+		"color": "Plateado",
+		"aseguradora": "Liberty",
+		"capacidad": 4,
+		"numSeguro": "4315588453"
+	},
+	{
+		"id": 6,
+		"placa": "EEU595",
+		"color": "Verde",
+		"aseguradora": "Liberty",
+		"capacidad": 1,
+		"numSeguro": "8246716705"
+	},
+	{
+		"id": 7,
+		"placa": "MQZ827",
+		"color": "Verde",
+		"aseguradora": "Sura",
+		"capacidad": 2,
+		"numSeguro": "7284387115"
+	},
+	{
+		"id": 8,
+		"placa": "ANH934",
+		"color": "Plateado",
+		"aseguradora": "Bolivar",
+		"capacidad": 5,
+		"numSeguro": "0498629172"
+	},
+	{
+		"id": 9,
+		"placa": "BII574",
+		"color": "Azul",
+		"aseguradora": "Bolivar",
+		"capacidad": 1,
+		"numSeguro": "3976943803"
+	},
+	{
+		"id": 10,
+		"placa": "JAB495",
+		"color": "Verde",
+		"aseguradora": "Sura",
+		"capacidad": 2,
+		"numSeguro": "3827890345"
+	}
+]
