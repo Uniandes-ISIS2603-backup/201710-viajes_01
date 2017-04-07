@@ -1,0 +1,40 @@
+<div class="panel panel-default"> 
+    <div class="panel-body">
+        <div class="row">          
+            <div class="col-md-3">
+                <div class="thumb">
+                    <h1>ID reserva: {{currentReserva.id}}</h1>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <dl>
+                    <hr>
+                    <dt>Numero de pasajeros:</dt>
+                    <dd>{{currentReserva.pasajeros}}</dd>
+                    
+                    <hr>
+                    <dt>Precio:</dt>
+                    <dd>{{currentReserva.precio}}</dd>
+                    
+                    <hr>
+                    <dt>Comision:</dt>
+                    <dd>{{currentReserva.comision}}</dd>
+                    
+                    <hr>
+                    <dt>Usuario:</dt>
+                    <dd ng-repeat="usuario in currentReserva.usuario">
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <a ui-sref="usuarioDetail({usuarioId: usuario.id})">{{usuario.nombre}}</a>
+                    </dd>
+                    
+                    <hr>
+                    <dt>Viaje:</dt>
+                    <dd ng-repeat="viaje in currentReserva.viaje">
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <a ui-sref="viajeDetail({viajeId: viaje.id})">{{viaje.ciudadDestino}}</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
