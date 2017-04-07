@@ -24,7 +24,7 @@
                 }
             }).state('vehiculosList',{
                 url: '/list',
-                parent: 'vehiculos',
+                parent: 'viajes',
                 views: {
                     'listView': {
                         templateUrl: basePath + 'vehiculos.list.html'
