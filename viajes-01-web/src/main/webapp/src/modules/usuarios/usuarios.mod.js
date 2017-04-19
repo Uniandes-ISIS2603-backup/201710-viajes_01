@@ -67,7 +67,7 @@
                                 return $http.edit(usuarios.id);
                             }]
                         templateUrl: basePath + 'edit/usuarios.list.html'
-                        
+                       
                     }
                 },
                 views: {
