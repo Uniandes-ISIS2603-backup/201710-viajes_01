@@ -1,17 +1,26 @@
-<div class="container-fluid">
+<div class="jumbotron">     
+        <h1><img src="http://2.bp.blogspot.com/-3eC5QDjHJog/U-s9nggCgfI/AAAAAAAAuoQ/CU2Sj-IcTWw/s1600/miku_sad.png" width="150" height="150" border="0"></a>Multas</h1>
+        <p>¡¡Upps!! La irresponsabilidad tambi&eacuten tiene sus consecuencias, reserva con compromiso</p>    
+       </div>    
+<div class="container-fluid">    
     <div class="col-sm-12">
+        
         <table class="table table-hover">
-            <thead>
-                <tr>
+            <thead>                            
+                <tr>                 
                     <th>Multa</th>
+                    <th>Id Usuario</th>
+                    <th>Nombre Usuario</th>
                     <th>Valor</th>
                     <th>Fecha</th>
                     <th>Descripcion</th>                 
                 </tr>
             </thead>
-            <tbody>
+            <tbody>                
                 <tr ng-repeat="multa in multasRecords">
                     <td id="{{$index}}-id">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.id}}</a></td>
+                    <td id="{{$index}}-idUsuario">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.usuario.id}}</a></td>
+                    <td id="{{$index}}-nombreUsuario">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.usuario.nombre}}</a></td>
                     <td id="{{$index}}-valor">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.valor}}</a></td>
                     <td id="{{$index}}-fecha">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.fecha}}</a></td>
                     <td id="{{$index}}-descripcion">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.descripcion}}</a></td>
