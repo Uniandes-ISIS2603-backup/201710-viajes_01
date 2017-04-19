@@ -5,7 +5,7 @@
 
     mod.controller("usuarioEditCtrl", ["$scope", "$state", "usuarios",
         function ($scope, $state, usuarios) {
-            $scope.currentRecord = usuario;
+            $scope.currentRecord = usuarios;
             $scope.actions = {
                 save: {
                     displayName: 'Save',
