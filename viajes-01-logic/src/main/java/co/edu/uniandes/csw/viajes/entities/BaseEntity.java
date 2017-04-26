@@ -2,13 +2,13 @@
 package co.edu.uniandes.csw.viajes.entities;
 
 import java.io.Serializable;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
-@Entity
-public class BaseEntity implements Serializable{
+@MappedSuperclass
+public abstract class BaseEntity implements Serializable{
   
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
