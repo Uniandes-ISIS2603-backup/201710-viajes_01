@@ -44,7 +44,7 @@
                 param: {
                     usuarioId: null
                 }
-            )}.state('usuariosDelete', {
+            }).state('usuariosDelete', {
                 url: '/delete',
                 parent: 'usuarios',
                 views: {
@@ -52,7 +52,7 @@
                         usuarios: ['$http', function ($http)
                             {
                                 return $http.delete(usuarios.id);
-                            }]
+                            }],
                         templateUrl: basePath + 'delete/usuarios.list.html'
                         
                     }
@@ -65,7 +65,7 @@
                         usuarios: ['$http', function ($http)
                             {
                                 return $http.edit(usuarios.id);
-                            }]
+                            }],
                         templateUrl: basePath + 'edit/usuarios.list.html'
                        
                     }
