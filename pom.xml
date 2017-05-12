@@ -5,7 +5,7 @@
     <artifactId>viajes-01</artifactId>
     <name>viajes-01</name>
     <packaging>pom</packaging>
-    <version>0.1.0</version>
+    <version>1.0</version>
     <modules>
         <module>viajes-01-logic</module>
         <module>viajes-01-web</module>

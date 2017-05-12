@@ -10,8 +10,8 @@
                 url: '/viajes',
                 abstract: true,
                 resolve: {
-                    viajes: ['$http', function ($http) {
-                            return $http.get('data/viajes.json');
+                    viajes: ['$http', 'viajesContext', function ($http, viajesContext) {
+                            return $http.get(viajesContext);
                         }]
                 },
                 views: {
@@ -44,23 +44,27 @@
                 param: {
                     viajeId: null
                 },
+                resolve: {
+                    currentViaje: ['$http', 'viajesContext', '$stateParams', function ($http, viajesContext, $params) {
+                            return $http.get(viajesContext + '/' + $params.viajeId);
+                        }]
+                },
                 views: {
                     'listView': {
                         resolve: {
-                            viajes: ['$http', function ($http) {
-                                    return $http.get('data/viajes.json');
+                            viajes: ['$http', 'viajesContext', function ($http, viajesContext) {
+                                    return $http.get(viajesContext);
                                 }]
                         },
                         templateUrl: basePathViajes + 'viajes.list.html',
-                        controller: ['$scope', 'viajes', '$stateParams', function ($scope, viajes, $params) {
-                                $scope.viajesRecords = viajes.data;
-                                $scope.currentViaje = $scope.viajesRecords[$params.viajeId - 1];
+                        controller: ['$scope', 'currentViaje', function ($scope, currentViaje) {
+                                $scope.currentViaje = currentViaje.data;
                             }]
                     },
                     'detailView': {
                         templateUrl: basePath + 'viajes.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentViaje = $scope.viajesRecords[$params.viajeId - 1];
+                        controller: ['$scope', 'currentViaje', function ($scope, currentViaje) {
+                                $scope.currentViaje = currentViaje.data;
                             }]
                     }
                 }
