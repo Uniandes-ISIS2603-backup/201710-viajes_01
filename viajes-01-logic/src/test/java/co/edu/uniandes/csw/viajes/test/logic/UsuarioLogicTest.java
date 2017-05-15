@@ -27,7 +27,7 @@ import uk.co.jemos.podam.api.PodamFactoryImpl;
 
 /**
  *
- * @author pj.alvarado10
+ * @author jp.perez12
  */
 public class UsuarioLogicTest
 {
