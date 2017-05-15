@@ -8,6 +8,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import uk.co.jemos.podam.common.PodamExclude;
 
 @Entity
 public class ViajeEntity extends BaseEntity{
@@ -37,9 +38,11 @@ public class ViajeEntity extends BaseEntity{
     @Temporal(TemporalType.DATE)
     private Date horaLlegada;
     
+    @PodamExclude
     @ManyToOne
     private VehiculoEntity vehiculo;
     
+    @PodamExclude
     @OneToMany(mappedBy ="viaje")
     private List<ReservaEntity> pasajeros;
     

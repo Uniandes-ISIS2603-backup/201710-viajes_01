@@ -118,7 +118,7 @@ public class CiudadLogicTest {
      * @generated
      */
     @Test
-    public void createBookTest() {
+    public void createCiudadTest() {
         PodamFactory factory = new PodamFactoryImpl();
         CiudadEntity entity = factory.manufacturePojo(CiudadEntity.class);
         CiudadEntity result = ciudadLogic.createCiudad(entity);
