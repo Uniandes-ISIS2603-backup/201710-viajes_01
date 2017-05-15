@@ -95,7 +95,7 @@ public class MultaEntity extends BaseEntity {
         this.reserva = reserva;
     }
        
-    
+    @Override
     public boolean equals(Object obj) {
         if (this.getId() != null) {
             return this.getId().equals(((MultaEntity) obj).getId());
