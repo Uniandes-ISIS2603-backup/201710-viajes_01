@@ -3,16 +3,14 @@
     mod.constant("ciudadesContext", "api/ciudades");
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             var basePath = 'src/modules/ciudades/';
-            var basePathCiudades = 'src/modules/ciudades/';
-            var basePathViajes = 'src/modules/viajes/';
             $urlRouterProvider.otherwise("/ciudadesList");
 
             $stateProvider.state('ciudades', {
                 url: '/ciudades',
                 abstract: true,
                 resolve: {
-                    ciudades: ['$http', function ($http) {
-                            return $http.get('data/ciudades.json');
+                    ciudades: ['$http', 'ciudadesContext', function ($http, ciudadesContext) {
+                            return $http.get(ciudadesContext);
                         }]
                 },
                 views: {
@@ -46,23 +44,27 @@
                 param: {
                     ciudadId: null
                 },
+                resolve: {
+                    currentCiudad: ['$http', 'ciudadesContext', '$stateParams', function ($http, ciudadesContext, $params) {
+                            return $http.get(ciudadesContext + '/' + $params.ciudadId);
+                        }]
+                },
                 views: {
                     'listView': {
                         resolve: {
-                            ciudades: ['$http', function ($http) {
-                                    return $http.get('data/ciudades.json');
+                            ciudades: ['$http', 'ciudadesContext', function ($http, ciudadesContext) {
+                                    return $http.get(ciudadesContext);
                                 }]
                         },
-                        templateUrl: basePathCiudades + 'ciudades.list.html',
-                        controller: ['$scope', 'ciudades', '$stateParams', function ($scope, ciudades, $params) {
-                                $scope.ciudadesRecords = ciudades.data;
-                                $scope.currentCiudad = $scope.ciudadesRecords[$params.ciudadId - 1];
+                        templateUrl: basePath + 'ciudades.list.html',
+                        controller: ['$scope', 'currentCiudad', function ($scope, currentCiudad) {
+                                $scope.currentCiudad = currentCiudad.data;
                             }]
                     },
                     'detailView': {
                         templateUrl: basePath + 'ciudades.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentCiudad = $scope.ciudadesRecords[$params.ciudadId - 1];
+                        controller: ['$scope', 'currentCiudad', function ($scope, currentCiudad) {
+                                $scope.currentCiudad = currentCiudad.data;
                             }]
                     }
                 }

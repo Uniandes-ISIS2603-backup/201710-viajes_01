@@ -52,7 +52,7 @@ public class ViajeEntity extends BaseEntity{
     @PodamExclude
     @OneToMany(mappedBy ="viaje")
     private List<ReservaEntity> pasajeros;
-    
+
     public Long getId(){
         return this.id;
     }

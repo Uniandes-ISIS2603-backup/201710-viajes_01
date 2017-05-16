@@ -2,10 +2,18 @@
 package co.edu.uniandes.csw.viajes.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import uk.co.jemos.podam.common.PodamExclude;
 
 @Entity
 public class CiudadEntity extends BaseEntity{
     
+    @PodamExclude
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    Long id;
     
     private String nombre;
     
