@@ -82,8 +82,8 @@ insert into ViajeEntity (id,ciudaddestino,ciudadorigen,direcciondejar,direccionr
 
 --Datos de Multa Entity (necesita tener creados las reservas y los usuarios respectivos)
 
-insert into MultaEntity (id,descripcion,estado,fecha,fechapago,valor,usuario_id)
-            values (1,'Multa por echar chistes malos',1,DATE('2015-12-17'),DATE('2015-12-17'),10.33,4);
+insert into MultaEntity (id,valor,fecha, descripcion,estado,fechapago,usuario_id)
+            values (1,10.33,DATE('2015-12-17'),'Multa por echar chistes malos',1,DATE('2015-12-17'),4);
 
 
 

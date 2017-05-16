@@ -2,6 +2,7 @@
 package co.edu.uniandes.csw.viajes.entities;
 
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,10 +11,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import uk.co.jemos.podam.common.PodamExclude;
 
 @Entity
 public class MultaEntity extends BaseEntity {
-    
+   
+   @PodamExclude
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
@@ -33,11 +36,9 @@ public class MultaEntity extends BaseEntity {
    @Temporal(TemporalType.DATE)
    private Date fechaPago;
    
+   @PodamExclude
    @ManyToOne
    private UsuarioEntity usuario;
-   
-   @OneToOne
-   private ReservaEntity reserva;
 
     public double getValor() {
         return valor;
@@ -87,13 +88,7 @@ public class MultaEntity extends BaseEntity {
         this.usuario = usuario;
     }
 
-    public ReservaEntity getReserva() {
-        return reserva;
-    }
-
-    public void setReserva(ReservaEntity reserva) {
-        this.reserva = reserva;
-    }
+    
        
     @Override
     public boolean equals(Object obj) {
