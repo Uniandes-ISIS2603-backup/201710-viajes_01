@@ -4,6 +4,9 @@ package co.edu.uniandes.csw.viajes.entities;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
@@ -13,6 +16,10 @@ import uk.co.jemos.podam.common.PodamExclude;
 @Entity
 public class ViajeEntity extends BaseEntity{
     
+    @PodamExclude
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    Long id;
     //@ManyToOne
     private String ciudadOrigen;
     //@ManyToOne
@@ -46,6 +53,13 @@ public class ViajeEntity extends BaseEntity{
     @OneToMany(mappedBy ="viaje")
     private List<ReservaEntity> pasajeros;
     
+    public Long getId(){
+        return this.id;
+    }
+    
+    public void setId(Long id){
+        this.id=id;
+    }
 
     public String getCiudadOrigen() {
         return ciudadOrigen;

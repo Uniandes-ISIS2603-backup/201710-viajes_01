@@ -1,10 +1,7 @@
 
 package co.edu.uniandes.csw.viajes.entities;
 
-// TODO: eliminar los import que no se usan
-import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 
 @Entity
 public class CiudadEntity extends BaseEntity{
@@ -14,9 +11,11 @@ public class CiudadEntity extends BaseEntity{
     
     // TODO: implementar las relaciones con otras clases
     
+    //@PodamExclude
     //@OneToMany(mappedBy ="ciudadOrigen")
     //private List<ViajeEntity> viajeIda;
     
+    //@PodamExclude
     //@OneToMany(mappedBy ="ciudadDestino")
     //private List<ViajeEntity> viajeVuelta;
 
