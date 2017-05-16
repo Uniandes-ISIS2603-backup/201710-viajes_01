@@ -177,7 +177,7 @@ public class UsuarioLogicTest
     }
     
     @Test
-    public void getViajeTest() {
+    public void getUsuarioTest() {
         try {
         UsuarioEntity entity = data.get(0);
         UsuarioEntity result = usuarioLogic.getUsuario(entity.getId());
@@ -198,7 +198,7 @@ public class UsuarioLogicTest
     }
     
     @Test
-    public void deleteCiudadTest() {
+    public void deleteUsuarioTest() {
         try {
             UsuarioEntity entity = data.get(0);
         usuarioLogic.deleteUsuario(entity.getId());

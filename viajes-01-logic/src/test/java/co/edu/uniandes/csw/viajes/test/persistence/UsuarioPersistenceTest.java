@@ -141,7 +141,7 @@ public class UsuarioPersistenceTest
      * @generated
      */
     @Test
-    public void getUsaurioTest() {
+    public void getUsuarioTest() {
         try{
         List<UsuarioEntity> list = usuarioPersistence.findAll();
        //Assert.assertEquals(data.size(), list.size());
@@ -167,7 +167,7 @@ public class UsuarioPersistenceTest
      * @generated
      */
     @Test
-    public void getViajeTest() {
+    public void getUsuariosTest() {
                try {
         UsuarioEntity entity = data.get(0);
         UsuarioEntity result = usuarioPersistence.find(entity.getId());
@@ -193,7 +193,7 @@ public class UsuarioPersistenceTest
      * @generated
      */
     @Test
-    public void deleteViajeTest() {
+    public void deleteUsuarioTest() {
         try{
         UsuarioEntity entity = data.get(0);
         usuarioPersistence.delete(entity.getId());
@@ -212,7 +212,7 @@ public class UsuarioPersistenceTest
      * @generated
      */
     @Test
-    public void updateCiudadTest() {
+    public void updateUsuarioTest() {
         try {
         UsuarioEntity entity = data.get(0);
         PodamFactory factory = new PodamFactoryImpl();
