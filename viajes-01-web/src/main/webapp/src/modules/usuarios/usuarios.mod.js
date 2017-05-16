@@ -43,32 +43,6 @@
                 parent: 'usuarios',
                 param: {
                     usuarioId: null
-                }
-            }).state('usuariosDelete', {
-                url: '/delete',
-                parent: 'usuarios',
-                views: {
-                    'listView': {
-                        usuarios: ['$http', function ($http)
-                            {
-                                return $http.delete(usuarios.id);
-                            }],
-                        templateUrl: basePath + 'delete/usuarios.list.html'
-                        
-                    }
-                }
-            }).state('usuariosEdit', {
-                url: '/edit',
-                parent: 'usuarios',
-                views: {
-                    'listView': {
-                        usuarios: ['$http', function ($http)
-                            {
-                                return $http.edit(usuarios.id);
-                            }],
-                        templateUrl: basePath + 'edit/usuarios.list.html'
-                       
-                    }
                 },
                 views: {
                     'listView': {
@@ -88,6 +62,33 @@
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
                                 $scope.currentUsuario = $scope.usuariosRecords[$params.usuarioId - 1];
                             }]
+                    }
+                }
+                
+            }).state('usuariosDelete', {
+                url: '/delete',
+                parent: 'usuarios',
+                views: {
+                    'listView': {
+                        usuarios: ['$http', function ($http)
+                            {
+                                return $http.delete(usuarios.id);
+                            }],
+                        templateUrl: basePath + 'delete/usuarios.delete.tpl.html'
+                        
+                    }
+                }
+            }).state('usuariosEdit', {
+                url: '/edit',
+                parent: 'usuarios',
+                views: {
+                    'listView': {
+                        usuarios: ['$http', function ($http)
+                            {
+                                return $http.edit(usuarios.id);
+                            }],
+                        templateUrl: basePath + 'edit/usuarios.edit.tpl.html'
+                       
                     }
                 }
             });
