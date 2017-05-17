@@ -10,8 +10,6 @@
             <thead>                            
                 <tr>                 
                     <th>Multa</th>
-                    <th>Id Usuario</th>
-                    <th>Nombre Usuario</th>
                     <th>Valor</th>
                     <th>Fecha</th>
                     <th>Descripcion</th>                 
@@ -19,9 +17,7 @@
             </thead>
             <tbody>                
                 <tr ng-repeat="multa in multasRecords">
-                    <td id="{{$index}}-id">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.id}}</a></td>
-                    <td id="{{$index}}-idUsuario">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.usuario.id}}</a></td>
-                    <td id="{{$index}}-nombreUsuario">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.usuario.nombre}}</a></td>
+                    <td id="{{$index}}-id">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.id}}</a></td>                  
                     <td id="{{$index}}-valor">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.valor}}</a></td>
                     <td id="{{$index}}-fecha">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.fecha}}</a></td>
                     <td id="{{$index}}-descripcion">   <a ui-sref="multaDetail({multaId: multa.id})">{{multa.descripcion}}</a></td>
