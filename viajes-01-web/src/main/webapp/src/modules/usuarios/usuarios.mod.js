@@ -36,16 +36,16 @@
                 views: {
                     'listView': {
                         templateUrl: basePath + 'usuarios.nice.html',
-                        controller: ['$http', 'usuariosContext', '$stateParams', function ($http, usuariosContext, $params) {
-                                    this.confirmDelete = function () {
+                        controller: ['$http', 'usuariosContext', '$stateParams', function ($http, usuariosContext) {
+                                    this.confirmDelete = function ($params) {
                                         alert('Se ha eliminado, por favor refresque la pagina ');
-                                        $http.delete(usuariosContext + '/' + usuariosContext.id);
+                                        $http.delete(usuariosContext + '/' + $params.usuarioId);
                                         
                                     };
-                                    this.confirmEdit = function () {
+                                    this.confirmEdit = function ($params) {
                                         alert('Se ha cambiado, por favor refresque la pagina');
                                         var data = {nombre:'cambio'} ;
-                                        $http.put(usuariosContext + '/' + 20, data);
+                                        $http.put(usuariosContext + '/' + $params.usuarioId, data);
                                       
                                     };
                                     this.confirmCreate = function () {
