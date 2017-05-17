@@ -111,7 +111,7 @@ public class MultaEntity extends BaseEntity {
     }
 
     
-    public Long obtenerId() {
+    public Long getId() {
         return id; //To change body of generated methods, choose Tools | Templates.
     }
 

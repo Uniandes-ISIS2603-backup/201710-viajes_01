@@ -128,10 +128,8 @@ public class MultaPersistenceTest {
         MultaEntity entity = em.find(MultaEntity.class, result.getId());
 
         Assert.assertEquals(result.getValor(), entity.getValor(), VALOR);
-        Assert.assertEquals(result.getFecha(), entity.getFecha());
         Assert.assertEquals(result.getDescripcion(), entity.getDescripcion());
         Assert.assertEquals(result.getEstado(), entity.getEstado());
-        Assert.assertEquals(result.getFechaPago(), entity.getFechaPago());
         }
         catch(Exception e){
             System.out.println("Error en la prueba para crear una multa" + e.getMessage());
@@ -171,15 +169,13 @@ public class MultaPersistenceTest {
         try{
             MultaEntity entity = data.get(0);
             MultaEntity newEntity = multaPersistence.find(entity.getId());
-            //Assert.assertNotNull(newEntity);
+            Assert.assertNotNull(newEntity);
             Assert.assertEquals(entity.getValor(), newEntity.getValor(), VALOR);
-            Assert.assertEquals(entity.getFecha(), newEntity.getFecha());
             Assert.assertEquals(entity.getDescripcion(), newEntity.getDescripcion());
-            Assert.assertEquals(newEntity.getEstado(), entity.getEstado());
-            Assert.assertEquals(newEntity.getFechaPago(), entity.getFechaPago());       
+            Assert.assertEquals(newEntity.getEstado(), entity.getEstado());     
         }
         catch(Exception e){
-             System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS" + e.getMessage());
+             System.out.println("Error en getMultaTest: " + e.getMessage());
         }
     }
 
@@ -217,10 +213,8 @@ public class MultaPersistenceTest {
             MultaEntity resp = em.find(MultaEntity.class, entity.getId());
 
             Assert.assertEquals(newEntity.getValor(), resp.getValor(), VALOR);
-            Assert.assertEquals(newEntity.getFecha(), resp.getFecha());
             Assert.assertEquals(newEntity.getDescripcion(), resp.getDescripcion());       
             Assert.assertEquals(newEntity.getEstado(), resp.getEstado());
-            Assert.assertEquals(newEntity.getFechaPago(), resp.getFechaPago());
         }
         catch(Exception e){
             System.out.println("Error en MultaPersistenceTest - updateMultaTest: " + e.getMessage());
