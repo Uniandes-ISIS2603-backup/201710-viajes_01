@@ -2,7 +2,7 @@
     <div class="jumbotron">
         <h1>Usuarios</h1> 
         <p>Lo más importante para nosotros son ustedes, nuestros usuarios!! </p>
-        <button id="confirm-create" ng-click="detail.ctrl.create" class="btn btn-danger">Crear</button>
+        <button id="confirm-create" ng-click="ctrl.confirmCreate()" class="btn btn-danger">Crear</button>
     </div>
     <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-xs-12 col-sm-9 col-md-12">
@@ -20,8 +20,8 @@
                             <h4>Telefono</h4>
                             <p>{{usuario.telefono}}</p>
                             <h5>¿Está seguro que desea borrar el registro?</h5>
-                            <button id="confirm-delete" ng-click="ctrl.ConfirmDelete()" class="btn btn-danger">Eliminar</button>
-                            <button id="confirm-edit" ng-click="detail.ctrl.edit" class="btn btn-info">Editar</button>
+                            <button id="confirm-delete" ng-click="ctrl.confirmDelete({usuarioId: usuario.id})" class="btn btn-danger">Eliminar</button>
+                            <button id="confirm-edit" ng-click="ctrl.confirmEdit({usuarioId: usuario.id})" class="btn btn-info">Editar</button>
                         </div>
                     </div>
                 </div>

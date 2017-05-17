@@ -35,7 +35,27 @@
                 parent: 'usuarios',
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'usuarios.nice.html'
+                        templateUrl: basePath + 'usuarios.nice.html',
+                        controller: ['$http', 'usuariosContext', '$stateParams', function ($http, usuariosContext, $params) {
+                                    this.confirmDelete = function () {
+                                        alert('Seguro que quiere eliminarlo? ');
+                                        $http.delete(usuariosContext + '/' + $params.usuarioId);
+                                        alert('No se ha podido eliminar, lo sentimos');
+                                    };
+                                    this.confirmEdit = function () {
+                                        alert('Seguro que quiere editarlo por Juancho?');
+                                        var data = {nombre:'Harry Plotter'} 
+                                        $http.put(usuariosContext + '/id:' + $params.usuarioId, data);
+                                        alert('No se ha podido editar, lo sentimos')
+                                    };
+                                    this.confirmCreate = function () {
+                                        alert('Seguro que quiere crear Juan');
+                                        var data = {nombre:'Juan'};
+                                        $http.post(usuariosContext,data);
+                                        alert('Hemos creado a Juan correctamente');
+                                    };
+                                }],
+                        controllerAs: 'ctrl'
                     }
                 }
             }).state('usuarioDetail', {
