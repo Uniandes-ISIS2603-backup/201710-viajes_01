@@ -34,7 +34,24 @@
                 parent: 'ciudades',
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'ciudades.nice.html'
+                        templateUrl: basePath + 'ciudades.nice.html',
+                        controller: ['$http', 'ciudadesContext', '$stateParams', function ($http, ciudadesContext, $params) {
+                                    this.confirmDelete = function () {
+                                        alert('LLEGA MALDITA SEA');
+                                        return $http.get(ciudadesContext + '/' + $params.ciudadId)
+                                    };
+                                    this.confirmEdit = function () {
+                                        alert('LLEGA MALDITA SEA');
+                                        var data = {nombre:'Girardot'} 
+                                        $http.post(ciudadesContext + '/' + $params.ciudadId,data)
+                                    };
+                                    this.confirmCreate = function () {
+                                        alert('LLEGA MALDITA SEA');
+                                        var data = {nombre:'Fusagasuga'};
+                                        $http.post(ciudadesContext,data)
+                                    };
+                                }],
+                        controllerAs: 'ctrl'
                     }
                 }
                 
