@@ -26,28 +26,14 @@ SOFTWARE.
 
     var mod = ng.module("reservaModule");
 
-    mod.controller("reservaNewCtrl", ["$scope", "$state", "reservas",
-        function ($scope, $state, reservas) {
-            $scope.currentRecord = {};
-            $scope.actions = {
-                save: {
-                    displayName: 'Save',
-                    icon: 'save',
-                    fn: function () {
-                        if ($scope.reservaForm.$valid) {
-                            reservas.post($scope.currentRecord).then(function (rc) {
-                                $state.go('reservaDetail', {reservaId: rc.id}, {reload: true});
-                            });
-                        }
-                    }
-                },
-                cancel: {
-                    displayName: 'Cancel',
-                    icon: 'remove',
-                    fn: function () {
-                        $state.go('reservasList');
-                    }
-                }
-            };
+    mod.controller("reservaNewCtrl", ["$scope", function ($scope) {
+            $scope.campos = {
+                pasajeros : 0,
+                precio : 0.0,
+                comision : 0.0
+            },
+            $scope.crear = function(){
+                alert('Se creara la reserva');
+            }
         }]);
 })(window.angular);

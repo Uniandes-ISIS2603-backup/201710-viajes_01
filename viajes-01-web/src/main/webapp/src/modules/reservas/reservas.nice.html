@@ -1,9 +1,19 @@
 <div class="container-fluid">
     <div class="jumbotron">
         <h1>Reservas</h1>
-        <a ui-sref="reservaNew">Nueva Reserva</a>
-         <button id="confirm-create" ng-click="detail.ctrl.create" class="btn btn-danger">Crear</button>
     </div>
+    <div class="col-xs-6 col-lg-4">
+        <form name="form-crear">
+        Pasajeros:<br>
+        <input type="number" name="input-pasajeros" ng-model="campos.pas"><br>
+        Precio:<br>
+        <input type="number" name="input-precio" ng-model="campos.pre"><br>
+        Comision:<br>
+        <input type="number" name="input-comision" ng-model="campos.com"><br>
+        <hr>
+        <button ng-click="ctrl.confirmCreate()" class="btn btn-danger">Crear</button><br><br>
+        </form>
+</div>
     <div class="row row-offcanvas row-offcanvas-right">
 	<div class="col-xs-12 col-sm-9 col-md-12">
             <div class="row">
@@ -19,8 +29,8 @@
                             <p>{{reserva.precio}}</p>
                             <h4>Comision:</h4>
                             <p>{{reserva.comision}}</p>
-                            <button id="confirm-delete" ng-click="detail.ctrl.delete" class="btn btn-danger">Eliminar</button>
-                            <button id="confirm-edit" ng-click="detail.ctrl.edit" class="btn btn-info">Editar</button>
+                            <button id="confirm-delete" ng-click="ctrl.confirmDelete({reservaId: reserva.id})" class="btn btn-danger">Eliminar</button>
+                            <button id="confirm-edit" ng-click="ctrl.confirmEdit()" class="btn btn-info">Editar</button>
                         </div>
                     </div>
                 </div>
