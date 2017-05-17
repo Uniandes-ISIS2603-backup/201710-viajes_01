@@ -39,7 +39,7 @@
                         controller: ['$http', 'usuariosContext', '$stateParams', function ($http, usuariosContext, $params) {
                                     this.confirmDelete = function () {
                                         alert('Se ha eliminado, por favor refresque la pagina ');
-                                        $http.delete(usuariosContext + '/' + 20);
+                                        $http.delete(usuariosContext + '/' + usuariosContext.id);
                                         
                                     };
                                     this.confirmEdit = function () {
