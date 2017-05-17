@@ -66,6 +66,20 @@
                             }]
                     }
                 }
+            }).state('reservasDelete', {
+                url: '/delete',
+                parent: 'reservas',
+                views: {
+                    'listView': {
+                        reservas: ['$http', function ($http)
+                            {
+                                return $http.delete(reservas.id);
+                            }],
+                        templateUrl: basePath + 'delete/reservas.delete.tpl.html',
+                        controller: 'reservaNewCtrl',
+                        controllerAs: 'ctrl'
+                    }
+                }
             });
         }]);
 })(window.angular);

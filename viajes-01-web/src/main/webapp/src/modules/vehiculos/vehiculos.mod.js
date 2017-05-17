@@ -68,6 +68,20 @@
                             }]
                     }
                 }
+            }).state('viajessDelete', {
+                url: '/delete',
+                parent: 'vehiculos',
+                views: {
+                    'listView': {
+                        vehiculos: ['$http', function ($http)
+                            {
+                                return $http.delete(vehiculos.id);
+                            }],
+                        templateUrl: basePath + 'delete/vehiculos.delete.tpl.html',
+                        controller: 'vehiculoNewCtrl',
+                        controllerAs: 'ctrl'
+                    }
+                }
             });
     }]);
 }) (window.angular);

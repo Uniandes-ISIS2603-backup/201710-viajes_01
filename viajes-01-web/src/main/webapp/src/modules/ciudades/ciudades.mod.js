@@ -68,6 +68,20 @@
                             }]
                     }
                 }
+            }).state('ciudadesDelete', {
+                url: '/delete',
+                parent: 'ciudades',
+                views: {
+                    'listView': {
+                        ciudades: ['$http', function ($http)
+                            {
+                                return $http.delete(ciudades.id);
+                            }],
+                        templateUrl: basePath + 'delete/ciudades.delete.tpl.html',
+                        controller: 'ciudadNewCtrl',
+                        controllerAs: 'ctrl'
+                    }
+                }
             });
         }]);
 })(window.angular);

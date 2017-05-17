@@ -68,6 +68,21 @@
                             }]
                     }
                 }
+            }).state('viajesDelete', {
+                url: '/delete',
+                parent: 'viajes',
+                views: {
+                    'listView': {
+                        viajes: ['$http', function ($http)
+                            {
+                                return $http.delete(viajes.id);
+                            }],
+                        templateUrl: basePath + 'delete/viajes.delete.tpl.html',
+                        controller: 'viajeNewCtrl',
+                        controllerAs: 'ctrl'
+                    }
+                }
             });
+            ;
         }]);
 })(window.angular);

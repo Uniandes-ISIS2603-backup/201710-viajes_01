@@ -69,6 +69,20 @@
                     }
                 }
 
+            }).state('multasDelete', {
+                url: '/delete',
+                parent: 'multas',
+                views: {
+                    'listView': {
+                        multas: ['$http', function ($http)
+                            {
+                                return $http.delete(multas.id);
+                            }],
+                        templateUrl: basePath + 'delete/multas.delete.tpl.html',
+                        controller: 'multaNewCtrl',
+                        controllerAs: 'ctrl'
+                    }
+                }
             });
         }]);
 })(window.angular);
