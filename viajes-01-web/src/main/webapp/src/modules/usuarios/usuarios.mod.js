@@ -10,8 +10,8 @@
                 url: '/usuarios',
                 abstract: true,
                 resolve: {
-                    usuarios: ['$http', function ($http) {
-                            return $http.get('data/usuarios.json');
+                    usuarios: ['$http', 'usuariosContext', function ($http, usuariosContext) {
+                            return $http.get(usuariosContext);
                         }]
                 },
                 views: {
@@ -44,23 +44,27 @@
                 param: {
                     usuarioId: null
                 },
+                resolve: {
+                    currentUsuario: ['$http', 'usuariosContext', '$stateParams', function ($http, usuariosContext, $params) {
+                            return $http.get(usuariosContext + '/' + $params.usuarioId);
+                        }]
+                },
                 views: {
                     'listView': {
                         resolve: {
-                            usuarios: ['$http', function ($http) {
-                                    return $http.get('data/usuarios.json');
+                            usuarios: ['$http', 'usuariosContext', function ($http, usuariosContext) {
+                                    return $http.get(usuariosContext);
                                 }]
                         },
                         templateUrl: basePathUsuarios + 'usuarios.list.html',
-                        controller: ['$scope', 'usuarios', '$stateParams', function ($scope, usuarios, $params) {
-                                $scope.usuariosRecords = usuarios.data;
-                                $scope.currentUsuario = $scope.usuariosRecords[$params.usuarioId - 1];
+                        controller: ['$scope', 'currentUsuario', function ($scope, currentUsuario) {
+                                $scope.currentUsuario = currentUsuario.data;
                             }]
                     },
                     'detailView': {
                         templateUrl: basePath + 'usuarios.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentUsuario = $scope.usuariosRecords[$params.usuarioId - 1];
+                        controller: ['$scope', 'currentUsuario', function ($scope, currentUsuario) {
+                                $scope.currentUsuario = currentUsuario.data;
                             }]
                     }
                 }

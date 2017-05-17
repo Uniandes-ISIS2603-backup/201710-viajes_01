@@ -25,9 +25,13 @@ package co.edu.uniandes.csw.viajes.entities;
 
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -36,6 +40,11 @@ import javax.persistence.OneToOne;
 
 @Entity
 public class UsuarioEntity extends BaseEntity{
+    
+    @PodamExclude
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    Long id;
     
     private static final long serialVersionUID = 1L;
     private String numero;
@@ -52,6 +61,16 @@ public class UsuarioEntity extends BaseEntity{
     
     @OneToMany(mappedBy = "usuario")
     private List<ReservaEntity> reservas; 
+
+    @Override
+    public Long getId() {
+        return id; //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id=id; //To change body of generated methods, choose Tools | Templates.
+    }
     
 
     public String getNumero() {
