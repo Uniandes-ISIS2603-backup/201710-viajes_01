@@ -3,12 +3,6 @@
   <persistence-unit name="viajesPU" transaction-type="JTA">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <jta-data-source>java:app/jdbc/viajes</jta-data-source>
-    <class>co.edu.uniandes.csw.viajes.entities.VehiculoEntity</class>
-    <class>co.edu.uniandes.csw.viajes.entities.MultaEntity</class>
-    <class>co.edu.uniandes.csw.viajes.entities.ReservaEntity</class>
-    <class>co.edu.uniandes.csw.viajes.entities.UsuarioEntity</class>
-    <class>co.edu.uniandes.csw.viajes.entities.ViajeEntity</class>
-    <class>co.edu.uniandes.csw.viajes.entities.CiudadEntity</class>
     <properties>
       <property name="eclipselink.logging.level" value="FINE"/>
       <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>

@@ -37,18 +37,21 @@
                         templateUrl: basePath + 'ciudades.nice.html',
                         controller: ['$http', 'ciudadesContext', '$stateParams', function ($http, ciudadesContext, $params) {
                                     this.confirmDelete = function () {
-                                        alert('LLEGA MALDITA SEA');
-                                        return $http.get(ciudadesContext + '/' + $params.ciudadId)
+                                        alert('Seguro que quiere eliminarlo? ');
+                                        $http.delete(ciudadesContext + '/' + $params.ciudadId);
+                                        alert('No se ha podido eliminar, lo sentimos');
                                     };
                                     this.confirmEdit = function () {
-                                        alert('LLEGA MALDITA SEA');
+                                        alert('Seguro que quiere editarlo por Girardot?');
                                         var data = {nombre:'Girardot'} 
-                                        $http.post(ciudadesContext + '/' + $params.ciudadId,data)
+                                        $http.put(ciudadesContext + '/id:' + $params.ciudadId,data);
+                                        alert('No se ha podido editar, lo sentimos')
                                     };
                                     this.confirmCreate = function () {
-                                        alert('LLEGA MALDITA SEA');
+                                        alert('Seguro que quiere crear Fusagasuga');
                                         var data = {nombre:'Fusagasuga'};
-                                        $http.post(ciudadesContext,data)
+                                        $http.post(ciudadesContext,data);
+                                        alert('Hemos creado FUSAGASUGA correctamente');
                                     };
                                 }],
                         controllerAs: 'ctrl'
