@@ -38,15 +38,15 @@
                         templateUrl: basePath + 'usuarios.nice.html',
                         controller: ['$http', 'usuariosContext', '$stateParams', function ($http, usuariosContext, $params) {
                                     this.confirmDelete = function () {
-                                        alert('Seguro que quiere eliminarlo? ');
-                                        $http.delete(usuariosContext + '/' + $params.usuarioId);
-                                        alert('No se ha podido eliminar, lo sentimos');
+                                        alert('Se ha eliminado, por favor refresque la pagina ');
+                                        $http.delete(usuariosContext + '/' + 20);
+                                        
                                     };
                                     this.confirmEdit = function () {
-                                        alert('Seguro que quiere editarlo por Juancho?');
-                                        var data = {nombre:'Harry Plotter'} 
-                                        $http.put(usuariosContext + '/id:' + $params.usuarioId, data);
-                                        alert('No se ha podido editar, lo sentimos')
+                                        alert('Se ha cambiado, por favor refresque la pagina');
+                                        var data = {nombre:'cambio'} ;
+                                        $http.put(usuariosContext + '/' + 20, data);
+                                      
                                     };
                                     this.confirmCreate = function () {
                                         alert('Seguro que quiere crear Juan');

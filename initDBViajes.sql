@@ -34,6 +34,8 @@ insert into UsuarioEntity (id,email,licencia,nombre,numero,telefono)
             values(3,'email@mai.com','1324465342','Harry Plotter','234554',3456574);
 insert into UsuarioEntity (id,email,licencia,nombre,numero,telefono)
             values(4,'email@mai.com','1324465342','Harry Plotter','3451234',3456574);
+insert into UsuarioEntity (id,email,licencia,nombre,numero,telefono)
+            values(20,'email@mai.com','1324465342','Usuario a borrar','3451234',3456574);
 
 
 
