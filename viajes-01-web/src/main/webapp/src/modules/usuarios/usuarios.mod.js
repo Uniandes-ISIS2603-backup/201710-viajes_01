@@ -78,8 +78,9 @@
                             {
                                 return $http.delete(usuarios.id);
                             }],
-                        templateUrl: basePath + 'delete/usuarios.delete.tpl.html'
-                        
+                        templateUrl: basePath + 'delete/usuarios.delete.tpl.html',
+                        controller: 'usuarioNewCtrl',
+                        controllerAs: 'ctrl'
                     }
                 }
             }).state('usuariosEdit', {
