@@ -2,28 +2,31 @@
     <div class="jumbotron">
         <h1>Viajes</h1> 
         <p>Wow. Si llegaste hasta aqu&iacute es porque est&aacutes m&aacutes que decidido a viajar y nos encanta que pienses as&iacute !! S&oacutelo falta alistar la maleta !! Adelante, &eacutechale un vistazo a los viajes que est&aacuten disponibles en este momento para ver cu&aacutel se acomoda a tus necesidades. </p> 
+        <button id="confirm-create" ng-click="detail.ctrl.create" class="btn btn-danger">Crear</button>
     </div>
     <div class="row row-offcanvas row-offcanvas-right">
-	<div class="col-xs-12 col-sm-9 col-md-12">
+        <div class="col-xs-12 col-sm-9 col-md-12">
             <div class="row">
-		<div class="col-xs-6 col-lg-4 thumb" ng-repeat="viaje in viajesRecords">
+                <div class="col-xs-6 col-lg-4 thumb" ng-repeat="viaje in viajesRecords">
                     <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3><a ui-sref="viajeDetail({viajeId: viaje.id})">ID del Viaje: {{viaje.id}}</a></h3>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Ciudad de Origen</h4>
-                        {{viaje.ciudadOrigen}}
-                        <h4>Ciudad de Destino</h4>
-                        {{viaje.ciudadDestino}}
-                        <h4>Gastos</h4>
-                        <p>{{viaje.gastoOtros}}</p>
-                        <h4>Cacharrito</h4>
-                        <p>{{viaje.vehiculo.name}}</p>
-                    </div>
+                        <div class="panel-heading">
+                            <h3><a ui-sref="viajeDetail({viajeId: viaje.id})">ID del Viaje: {{viaje.id}}</a></h3>
+                        </div>
+                        <div class="panel-body">
+                            <h4>Ciudad de Origen</h4>
+                            {{viaje.ciudadOrigen}}
+                            <h4>Ciudad de Destino</h4>
+                            {{viaje.ciudadDestino}}
+                            <h4>Gastos</h4>
+                            <p>{{viaje.gastoOtros}}</p>
+                            <h4>Cacharrito</h4>
+                            <p>{{viaje.vehiculo.name}}</p>
+                            <button id="confirm-delete" ng-click="detail.ctrl.delete" class="btn btn-danger">Eliminar</button>
+                            <button id="confirm-edit" ng-click="detail.ctrl.edit" class="btn btn-info">Editar</button>
+                        </div>
                     </div>
                 </div>
             </div>
-	</div>
+        </div>
     </div>
 </div>
