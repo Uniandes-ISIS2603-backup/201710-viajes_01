@@ -4,18 +4,14 @@
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             var basePath = 'src/modules/multas/';
             var basePathMultas = 'src/modules/multas/';
-            //var basePathUsuarios = 'src/modules/usuarios/';
-            //var basePathReservas = 'src/modules/reservas/;
             $urlRouterProvider.otherwise("/multasList");
 
             $stateProvider.state('multas', {
                 url: '/multas',
                 abstract: true,
                 resolve: {
-                   //multas: ['http', 'multasContext', function($http, multasContext){
-                    multas: ['$http', function ($http) {
-                           return $http.get('data/multas.json');
-                             //return $http.get(multasContext);
+                   multas: ['$http', 'multasContext', function ($http, multasContext) {
+                            return $http.get(multasContext);
                         }]
                 },
                 views: {
@@ -48,26 +44,29 @@
                 param: {
                     multaId: null
                 },            
+                resolve: {
+                    currentMulta: ['$http', 'multasContext', '$stateParams', function ($http, multasContext, $params) {
+                            return $http.get(multasContext + '/' + $params.multaId);
+                        }]
+                },
                 views: {
                     'listView': {
-                      resolve: {
-                            multas: ['$http', function ($http) {
-                                    return $http.get('data/multas.json');
+                        resolve: {
+                            multas: ['$http', 'multasContext', function ($http, multasContext) {
+                                    return $http.get(multasContext);
                                 }]
                         },
                         templateUrl: basePathMultas + 'multas.list.html',
-                        controller: ['$scope', 'multas', '$stateParams', function ($scope, multas, $params) {
-                                $scope.multasRecords = multas.data;
-                                $scope.currentMulta = $scope.multasRecords[$params.multaId - 1];
-                            }]      
+                        controller: ['$scope', 'currentMulta', function ($scope, currentMulta) {
+                                $scope.currentMulta = currentMulta.data;
+                            }]
                     },
                     'detailView': {
                         templateUrl: basePath + 'multas.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentMulta = $scope.multasRecords[$params.multaId-1];
+                        controller: ['$scope', 'currentMulta', function ($scope, currentMulta) {
+                                $scope.currentMulta = currentMulta.data;
                             }]
                     }
-
                 }
 
             });
