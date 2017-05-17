@@ -145,18 +145,14 @@ public class MultaLogicTest {
     public void createMultaTest() {
         try{
         PodamFactory factory = new PodamFactoryImpl();
-        MultaEntity newEntity = factory.manufacturePojo(MultaEntity.class);
-        MultaEntity result = multaPersistence.create(newEntity);
-
+        MultaEntity entity = factory.manufacturePojo(MultaEntity.class);
+        MultaEntity result = multaLogic.createMulta(entity);
         Assert.assertNotNull(result);
-
-        MultaEntity entity = em.find(MultaEntity.class, result.getId());
-
         Assert.assertEquals(result.getValor(), entity.getValor(), VALOR);
         Assert.assertEquals(result.getFecha(), entity.getFecha());
         Assert.assertEquals(result.getDescripcion(), entity.getDescripcion());
         Assert.assertEquals(result.getEstado(), entity.getEstado());
-        Assert.assertEquals(result.getFechaPago(), entity.getFechaPago());  
+        Assert.assertEquals(result.getFechaPago(), entity.getFechaPago());      
         }
         catch(Exception e)
         {
@@ -197,13 +193,13 @@ public class MultaLogicTest {
     public void getMultaTest() {
         try{
         MultaEntity entity = data.get(0);
-        MultaEntity newEntity = multaPersistence.find(entity.getId());
-        //Assert.assertNotNull(newEntity);
-        Assert.assertEquals(entity.getValor(), newEntity.getValor(), VALOR);
-        Assert.assertEquals(entity.getFecha(), newEntity.getFecha());
-        Assert.assertEquals(entity.getDescripcion(), newEntity.getDescripcion());
-        Assert.assertEquals(entity.getEstado(), newEntity.getEstado());
-        Assert.assertEquals(entity.getFechaPago(), newEntity.getFechaPago());
+        MultaEntity resultEntity = multaLogic.getMulta(entity.getId());
+        Assert.assertNotNull(resultEntity);
+        Assert.assertEquals(resultEntity.getValor(), entity.getValor(), VALOR);
+        Assert.assertEquals(resultEntity.getFecha(), entity.getFecha());
+        Assert.assertEquals(resultEntity.getDescripcion(), entity.getDescripcion());
+        Assert.assertEquals(resultEntity.getEstado(), entity.getEstado());
+        Assert.assertEquals(resultEntity.getFechaPago(), entity.getFechaPago());        
         }
         catch(Exception e){
             System.out.println("Error en get multa test del logic");

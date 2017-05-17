@@ -120,18 +120,18 @@ public class MultaPersistenceTest {
     public void createMultaTest() {
         try{
             PodamFactory factory = new PodamFactoryImpl();
-            MultaEntity newEntity = factory.manufacturePojo(MultaEntity.class);
-            MultaEntity result = multaPersistence.create(newEntity);
+        MultaEntity newEntity = factory.manufacturePojo(MultaEntity.class);
+        MultaEntity result = multaPersistence.create(newEntity);
 
-            Assert.assertNotNull(result);
+        Assert.assertNotNull(result);
 
-            MultaEntity entity = em.find(MultaEntity.class, result.getId());
+        MultaEntity entity = em.find(MultaEntity.class, result.getId());
 
-            Assert.assertEquals(newEntity.getValor(), entity.getValor(), VALOR);
-            Assert.assertEquals(newEntity.getFecha(), entity.getFecha());
-            Assert.assertEquals(newEntity.getDescripcion(), entity.getDescripcion());
-            Assert.assertEquals(newEntity.getEstado(), entity.getEstado());
-            Assert.assertEquals(newEntity.getFechaPago(), entity.getFechaPago());
+        Assert.assertEquals(result.getValor(), entity.getValor(), VALOR);
+        Assert.assertEquals(result.getFecha(), entity.getFecha());
+        Assert.assertEquals(result.getDescripcion(), entity.getDescripcion());
+        Assert.assertEquals(result.getEstado(), entity.getEstado());
+        Assert.assertEquals(result.getFechaPago(), entity.getFechaPago());
         }
         catch(Exception e){
             System.out.println("Error en la prueba para crear una multa" + e.getMessage());

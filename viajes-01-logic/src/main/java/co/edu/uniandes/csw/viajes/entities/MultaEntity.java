@@ -61,17 +61,7 @@ public class MultaEntity extends BaseEntity {
    @PodamExclude
    @ManyToOne
    private UsuarioEntity usuario;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-   
-   
-
+      
     public double getValor() {
         return valor;
     }
@@ -120,6 +110,17 @@ public class MultaEntity extends BaseEntity {
         this.usuario = usuario;
     }
 
+    
+    public Long obtenerId() {
+        return id; //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setId(Long id) {
+       this.id =id; //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
     
        
     @Override
