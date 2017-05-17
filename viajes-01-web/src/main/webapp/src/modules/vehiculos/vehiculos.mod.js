@@ -10,9 +10,9 @@
                 url: '/vehiculos',
                 abstract: true,
                 resolve: {
-                    vehiculos: ['$http', function ($http){
-                            return $http.get('data/vehiculos.json');
-                    }]
+                   vehiculos: ['$http', 'vehiculosContext', function ($http, vehiculosContext) {
+                            return $http.get(vehiculosContext);
+                        }]
                 },
                 views: {
                     'mainView': {
@@ -44,23 +44,27 @@
                 param: {
                     vehiculoId: null
                 },
+                resolve: {
+                    currentVehiculo: ['$http', 'vehiculosContext', '$stateParams', function ($http, vehiculosContext, $params) {
+                            return $http.get(vehiculosContext + '/' + $params.vehiculoId);
+                        }]
+                },
                 views: {
                     'listView': {
                         resolve: {
-                            vehiculos: ['$http', function ($http) {
-                                    return $http.get('data/vehiculos.json');
-                            }]
+                            vehiculos: ['$http', 'vehiculosContext', function ($http, vehiculosContext) {
+                                    return $http.get(vehiculosContext);
+                                }]
                         },
                         templateUrl: basePathVehiculos + 'vehiculos.list.html',
-                        controller: ['$scope', 'vehiculos', '$stateParams', function ($scope, vehiculos, $params) {
-                                $scope.vehiculosRecords = vehiculos.data;
-                                $scope.currentVehiculo = $scope.vehiculosRecords[$params.vehiculoId - 1];
-                        }]
+                        controller: ['$scope', 'currentVehiculo', function ($scope, currentVehiculo) {
+                                $scope.currentVehiculo = currentVehiculo.data;
+                            }]
                     },
                     'detailView': {
                         templateUrl: basePath + 'vehiculos.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentVehiculo = $scope.vehiculosRecords[$params.vehiculoId - 1];
+                        controller: ['$scope', 'currentVehiculo', function ($scope, currentVehiculo) {
+                                $scope.currentVehiculo = currentVehiculo.data;
                             }]
                     }
                 }
