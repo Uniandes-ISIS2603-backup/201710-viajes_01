@@ -35,7 +35,7 @@
                 views: {
                     'listView': {
                         templateUrl: basePath + 'reservas.nice.html',
-                        controller: ['$http', 'reservasContext', '$stateParams', '$scope', function ($http, reservasContext, $scope) {
+                        controller: ['$http', 'reservasContext', '$scope', function ($http, reservasContext, $scope) {
                                     $scope.campos = {
                                         pas : 0,
                                         pre : 0.0,
