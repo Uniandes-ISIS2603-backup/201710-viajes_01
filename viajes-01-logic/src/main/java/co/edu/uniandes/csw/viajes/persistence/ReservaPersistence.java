@@ -41,7 +41,7 @@ public class ReservaPersistence{
     }
 
     public List<ReservaEntity> findAll() {
-        Query q = em.createQuery("select u from ReservaEntity u");
+        Query q = em.createQuery("Select u from ReservaEntity u");
         return q.getResultList();
     }
 

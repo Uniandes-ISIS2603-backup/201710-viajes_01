@@ -9,8 +9,8 @@
                 url: '/reservas',
                 abstract: true,
                 resolve: {
-                    reservas: ['$http', function ($http) {
-                            return $http.get('data/reservas.json');
+                    reservas: ['$http', 'reservasContext', function ($http, reservasContext) {
+                            return $http.get(reservasContext);
                         }]
                 },
                 views: {
@@ -37,17 +37,32 @@
                         templateUrl: basePath + 'reservas.nice.html'
                     }
                 }
+            }).state('reservaNew', {
+                url: '/new',
+                parent: 'reservas',
+                views: {
+                    'reservaView': {
+                        templateUrl: basePath + 'reservas.new.html',
+                        controller: 'reservaNewCtrl',
+                        controllerAs: 'ctrl'
+                    }
+                }
             }).state('reservaDetail', {
                 url: '/{reservaId:int}/detail',
                 parent: 'reservas',
                 param: {
                     reservaId: null
                 },
+                resolve: {
+                    currentReserva: ['$http', 'reservasContext', '$stateParams', function ($http, reservasContext, $params) {
+                            return $http.get(reservasContext + '/' + $params.reservaId);
+                        }]
+                },
                 views: {
                     'detailView': {
                         templateUrl: basePath + 'reservas.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId - 1];
+                        controller: ['$scope', 'currentReserva', function ($scope, currentReserva) {
+                                $scope.currentReserva = currentReserva.data;
                             }]
                     }
                 }

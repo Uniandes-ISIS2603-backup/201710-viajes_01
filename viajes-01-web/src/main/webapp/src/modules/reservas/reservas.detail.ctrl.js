@@ -11,7 +11,7 @@
                     displayName: 'Create',
                     icon: 'plus',
                     fn: function () {
-                        $state.go('reservasNew');
+                        $state.go('reservaNew');
                     }
                 },
                 edit: {
