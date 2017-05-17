@@ -35,7 +35,27 @@
                 parent: 'vehiculos',
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'vehiculos.nice.html'
+                        templateUrl: basePath + 'vehiculos.nice.html',
+                         controller: ['$http', 'vehiculosContext', '$stateParams', function ($http, vehiculosContext, $params) {
+                                    this.confirmDelete = function () {
+                                        alert('Seguro que quiere eliminarlo? ');
+                                        $http.delete(vehiculosContext + '/' + $params.vehiculoId);
+                                        
+                                    };
+                                    this.confirmEdit = function () {
+                                        alert('Seguro que quiere editarlo por AAA111?');
+                                        var data = {placa:'AAA111'}; 
+                                        $http.put(vehiculosContext + '/id:' + $params.vehiculoId, data);
+                                        
+                                    };
+                                    this.confirmCreate = function () {
+                                        alert('Seguro que quiere crear');
+                                        var data = {placa:'AAA123'};
+                                        $http.post(vehiculosContext,data);
+                                        
+                                    };
+                                }],
+                        controllerAs: 'ctrl'
                     }
                 }
             }).state('vehiculoDetail', {
