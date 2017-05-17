@@ -5,7 +5,7 @@
 
     mod.controller("usuarioDeleteCtrl", ["$state", "usuarios", function ($state, usuarios) {
             this.confirmDelete = function () {
-                usuarios.remove().then(function () {
+                reservas.remove().then(function () {
                     $state.go('usuariosList', null, {reload: true});
                 });
             };

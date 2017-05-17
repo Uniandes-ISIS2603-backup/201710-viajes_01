@@ -1,31 +1,31 @@
 
 (function (ng) {
 
-    var mod = ng.module("viajeModule");
+    var mod = ng.module("vehiculoModule");
 
-    mod.controller("viajeDetailCtrl", ['$scope', "$state", "viajes",
-        function ($scope, $state, viajes) {
-            $scope.currentRecord = viajes;
+    mod.controller("vehiculoDetailCtrl", ['$scope', "$state", "vehiculos",
+        function ($scope, $state, vehiculos) {
+            $scope.currentRecord = vehiculos;
             $scope.actions = {
                 create: {
                     displayName: 'Create',
                     icon: 'plus',
                     fn: function () {
-                        $state.go('viajesNew');
+                        $state.go('vehiculosNew');
                     }
                 },
                 edit: {
                     displayName: 'Edit',
                     icon: 'edit',
                     fn: function () {
-                        $state.go('viajesEdit');
+                        $state.go('vehiculosEdit');
                     }
                 },
                 delete: {
                     displayName: 'Delete',
                     icon: 'minus',
                     fn: function () {
-                        $state.go('viajesDelete');
+                        $state.go('vehiculosDelete');
                     }
                 },
                 refresh: {
@@ -39,7 +39,7 @@
                     displayName: 'List',
                     icon: 'th-list',
                     fn: function () {
-                        $state.go('viajesList');
+                        $state.go('vehiculosList');
                     }
                 }
             };

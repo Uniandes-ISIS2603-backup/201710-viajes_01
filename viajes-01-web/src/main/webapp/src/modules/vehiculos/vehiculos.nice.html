@@ -1,6 +1,7 @@
 <div class="container-fluid">
     <div class="jumbotron">
         <h1>Vehiculos</h1> 
+        <button id="confirm-create" ng-click="detail.ctrl.create" class="btn btn-danger">Crear</button>
     </div>
     <div class="row row-offcanvas row-offcanvas-right">
     <div class="col-xs-12 col-sm-9 col-md-12">
@@ -22,6 +23,9 @@
                         <p>{{vehiculo.capacidad}}</p>
                         <h4>Número de seguro</h4>
                         <p>{{vehiculo.numSeguro}}</p>
+                        <button id="confirm-delete" ng-click="detail.ctrl.delete" class="btn btn-danger">Eliminar</button>
+                        <button id="confirm-edit" ng-click="detail.ctrl.edit" class="btn btn-info">Editar</button>
+
                         <!--
                         <h4>Foto</h4>
                         <img class="img-responsive img-rounded" ng-src="{{vehiculo.img}}" ng-if="vehiculo.img"/>
